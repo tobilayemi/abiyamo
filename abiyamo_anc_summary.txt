@@ -1,0 +1,57 @@
+============================================================
+ABIYAMO - Synthetic ANC Dataset Summary
+Generated: 2026-03-10 07:13
+Total Records: 1000
+============================================================
+
+--- RISK DISTRIBUTION ---
+  Critical    :  133  (13.3%)
+  High        :  337  (33.7%)
+  Moderate    :  358  (35.8%)
+  Low         :  172  (17.2%)
+
+--- TOP CONDITIONS ---
+  Mild Anaemia in Pregnancy                    : 212
+  Routine ANC - No Significant Risk            : 172
+  Moderate-Severe Anaemia                      : 146
+  Malaria in Pregnancy                         : 120
+  Gestational Hypertension                     : 80
+  Severe Anaemia in Pregnancy                  : 77
+  Severe Hypertension in Pregnancy             : 37
+  Reduced Fetal Movement                       : 30
+  Previous Caesarean Section                   : 25
+  Fetal Growth Restriction                     : 22
+
+--- KEY CLINICAL STATS ---
+  Mean Age                : 25.7 yrs
+  Mean Gestational Age    : 25.5 wks
+  Mean Hemoglobin         : 10.4 g/dL
+  Anaemia (Hb < 11)       : 610 (61.0%)
+  Severe Anaemia (Hb < 7) : 81 (8.1%)
+  Hypertension (SBP≥140)  : 151 (15.1%)
+  HIV Positive            : 12 (1.2%)
+  Malaria Positive        : 187 (18.7%)
+
+--- FACILITY DISTRIBUTION ---
+  PHC            : 565
+  Secondary      : 341
+  Tertiary       : 94
+
+--- ICD-11 CODE DISTRIBUTION ---
+  JA42        : 358
+  Z34         : 172
+  1A44.Z      : 120
+  JA24.1      : 80
+  JA43        : 77
+  JA00        : 65
+  JA65        : 52
+  JA24.3      : 51
+  JA24.2      : 13
+  1C62.Z      : 6
+  JA60        : 5
+  JA63        : 1
+
+============================================================
+Files saved:
+  abiyamo_anc_synthetic.csv
+============================================================

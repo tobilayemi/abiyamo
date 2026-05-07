@@ -1,0 +1,1001 @@
+patient_id,age,parity,previous_cs,previous_loss,facility_level,geo_zone,gestational_age_wks,sbp_mmhg,dbp_mmhg,hemoglobin_gdl,bmi,fundal_height_cm,urine_protein,hiv_status,malaria_status,gdm_risk,symptom_headache,symptom_oedema,symptom_rfm,symptom_bleeding,symptom_epigastric,risk_category,primary_condition,icd11_code
+ABY-00001,28,0,0,0,Secondary,North-Central,29,138,86,7.6,19.2,30.3,2+,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00002,25,0,0,0,PHC,North-West,24,119,59,8.9,20.3,24.1,trace,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00003,29,2,0,0,Secondary,South-South,14,125,68,12.4,21.8,12.3,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00004,35,3,0,0,Tertiary,South-West,28,142,72,11.0,25.8,29.1,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00005,24,0,0,1,Tertiary,North-Central,28,118,73,12.6,18.7,29.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00006,24,5,0,1,Secondary,North-West,35,133,95,5.8,25.9,32.7,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00007,35,0,0,0,Secondary,South-South,16,101,50,10.5,19.2,17.1,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00008,30,2,1,0,PHC,North-Central,23,120,77,7.0,33.6,23.4,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00009,23,3,1,0,PHC,South-West,20,141,88,5.5,26.1,20.0,3+,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00010,29,4,0,0,Secondary,North-East,13,109,107,11.9,32.5,10.0,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00011,23,3,0,1,Secondary,North-East,40,114,69,11.7,23.1,40.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00012,23,4,1,0,PHC,South-West,36,118,74,9.9,16.6,34.3,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00013,27,1,0,0,Tertiary,North-Central,22,128,86,13.0,19.5,21.4,2+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00014,15,4,1,0,PHC,North-West,21,125,51,8.8,30.9,21.9,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00015,15,0,0,0,PHC,North-Central,12,164,91,10.0,18.6,13.7,negative,0,0,0,1,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00016,22,5,1,0,Secondary,North-West,30,104,78,12.1,24.6,29.0,2+,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00017,19,2,0,1,Secondary,North-West,8,127,74,15.0,19.9,10.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00018,27,4,0,0,PHC,North-West,24,146,104,7.5,23.3,22.8,2+,0,0,0,1,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00019,20,1,0,0,PHC,South-East,27,128,65,12.2,25.8,29.6,1+,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00020,17,2,0,0,Secondary,North-West,20,106,80,11.2,23.6,18.5,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00021,34,2,0,0,PHC,North-East,40,97,81,9.8,18.1,39.7,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00022,24,3,0,0,PHC,South-South,31,96,73,9.3,32.8,29.0,2+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00023,26,0,0,0,PHC,North-Central,15,137,76,11.7,17.9,17.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00024,17,0,0,0,Tertiary,South-East,20,82,75,9.4,23.9,16.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00025,22,0,0,0,Secondary,South-East,23,143,107,11.6,23.7,23.0,1+,0,1,0,0,0,1,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00026,26,0,0,1,Tertiary,South-East,37,124,81,10.2,35.1,30.4,1+,0,1,0,0,0,1,0,0,High,Fetal Growth Restriction,JA65
+ABY-00027,19,4,0,0,Secondary,North-West,15,149,77,9.6,28.4,15.5,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00028,28,0,0,0,Secondary,South-South,16,110,75,12.5,29.9,10.7,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00029,22,7,0,0,PHC,South-East,22,100,60,5.4,22.6,21.5,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00030,24,1,0,0,PHC,North-West,25,111,67,12.2,21.7,26.3,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00031,22,0,0,0,Tertiary,North-West,36,120,65,12.4,25.8,37.0,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00032,37,3,0,0,Tertiary,North-West,29,113,72,10.1,22.6,31.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00033,25,3,0,1,PHC,South-East,11,117,84,10.2,28.0,12.2,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00034,19,2,1,0,PHC,South-South,25,117,76,11.4,20.5,28.3,negative,0,0,0,0,1,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00035,30,2,0,1,PHC,South-East,28,137,90,8.6,25.0,25.1,trace,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00036,18,3,0,1,Secondary,North-West,37,114,68,5.8,30.7,35.6,2+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00037,27,0,0,1,PHC,South-South,21,106,88,11.7,22.0,20.5,2+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00038,15,8,0,0,Secondary,North-West,8,151,97,10.4,19.7,10.9,trace,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00039,18,7,0,0,Tertiary,North-Central,27,116,81,8.2,16.2,26.3,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00040,27,3,0,0,Tertiary,South-East,27,130,79,8.5,27.8,24.1,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00041,30,0,0,0,Secondary,North-West,40,105,75,12.7,20.1,40.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00042,27,3,1,0,PHC,North-West,30,128,70,13.9,20.7,26.7,trace,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00043,25,0,0,0,PHC,North-Central,30,95,82,13.5,21.5,32.1,1+,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00044,24,0,0,0,PHC,North-East,24,115,76,11.6,17.1,18.1,negative,0,0,0,0,0,0,0,1,High,Fetal Growth Restriction,JA65
+ABY-00045,17,1,0,0,PHC,South-South,32,108,64,6.3,28.3,33.2,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00046,21,1,1,0,Secondary,North-East,36,108,67,13.0,31.3,34.6,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00047,23,4,0,0,Tertiary,North-East,40,106,64,8.2,25.1,39.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00048,32,3,0,0,Secondary,South-East,20,154,105,8.9,22.2,19.8,1+,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00049,28,3,0,0,PHC,North-West,36,128,68,5.2,25.0,36.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00050,15,1,0,0,Secondary,North-East,40,144,71,10.9,16.0,39.7,3+,0,0,0,0,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00051,27,1,0,0,Secondary,North-Central,40,95,78,9.5,24.3,40.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00052,23,1,0,0,Secondary,South-South,29,117,76,13.1,28.5,27.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00053,21,7,1,0,PHC,North-West,26,102,72,10.5,28.2,25.4,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00054,29,0,0,0,Secondary,South-West,24,120,81,9.6,22.3,22.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00055,32,4,0,0,Tertiary,South-West,29,113,73,10.1,26.3,28.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00056,31,2,0,1,PHC,North-Central,25,172,114,11.8,19.5,27.5,2+,0,0,0,1,0,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00057,20,1,0,0,Tertiary,North-Central,13,155,99,12.2,32.0,12.6,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00058,24,3,0,0,Secondary,South-West,29,109,75,12.6,26.6,27.9,1+,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00059,27,2,0,0,PHC,North-East,9,150,96,12.8,26.5,10.0,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00060,31,4,0,1,Secondary,North-West,39,94,68,11.6,19.1,37.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00061,23,5,0,0,PHC,North-West,24,111,58,5.9,29.9,25.2,3+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00062,24,1,0,0,Secondary,South-South,33,81,57,8.4,23.1,31.9,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00063,19,1,0,0,PHC,South-West,13,129,73,11.4,18.1,11.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00064,18,2,1,0,PHC,South-South,17,113,76,7.8,28.5,16.1,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00065,30,5,1,0,Secondary,North-Central,30,80,83,13.6,24.8,28.1,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00066,34,0,0,0,PHC,North-West,28,134,73,10.7,26.8,24.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00067,25,2,1,0,PHC,North-West,25,119,75,7.6,23.5,26.8,trace,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00068,32,2,0,0,PHC,North-West,29,106,78,8.9,29.7,31.2,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00069,28,3,0,0,PHC,North-Central,14,116,76,10.6,24.4,15.5,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00070,22,0,0,1,PHC,North-Central,38,128,72,11.6,26.3,38.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00071,28,3,0,0,PHC,South-West,23,124,81,12.9,27.2,22.2,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00072,35,5,0,1,PHC,North-West,32,101,84,13.7,40.0,35.8,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00073,25,0,0,0,PHC,South-East,25,144,96,14.3,21.5,24.8,trace,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00074,35,0,0,0,PHC,North-East,35,111,65,13.4,21.2,37.5,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00075,15,7,0,0,PHC,North-West,15,113,77,11.6,28.9,10.9,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00076,30,0,0,1,Secondary,South-West,32,113,84,8.6,19.4,28.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00077,26,4,1,0,Secondary,North-West,20,92,63,6.4,27.5,19.6,negative,0,1,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00078,24,2,0,0,PHC,North-West,35,135,81,8.3,29.8,38.4,trace,0,0,0,0,0,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00079,26,0,0,0,PHC,South-West,31,148,128,8.4,18.3,31.9,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00080,15,4,0,0,Tertiary,South-West,10,115,84,6.4,17.5,10.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00081,24,1,0,0,Secondary,North-West,28,115,88,13.1,26.4,32.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00082,28,2,0,0,Tertiary,South-South,28,108,71,11.3,17.8,29.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00083,34,1,0,0,PHC,South-South,27,115,66,9.0,30.8,28.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00084,22,2,0,0,Secondary,South-West,19,135,71,11.6,17.3,21.9,negative,0,0,0,0,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00085,21,0,0,0,PHC,North-West,16,111,77,10.9,26.1,13.2,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00086,22,1,0,0,PHC,North-East,28,142,79,9.6,28.4,29.4,negative,0,0,0,1,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00087,31,6,0,0,PHC,North-East,10,143,91,9.7,28.4,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00088,27,1,0,0,PHC,South-West,24,104,70,13.5,34.5,25.9,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00089,22,3,0,1,Secondary,South-South,36,125,50,6.7,24.5,35.4,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00090,29,1,0,0,PHC,South-East,20,93,79,12.6,31.1,21.7,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00091,26,3,0,0,PHC,North-Central,30,105,53,10.9,22.9,31.6,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00092,31,0,0,0,PHC,South-East,20,112,86,13.8,27.9,18.8,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00093,21,6,0,0,Tertiary,North-Central,21,126,71,9.8,26.3,22.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00094,24,1,0,0,Secondary,South-South,39,118,72,10.3,28.3,35.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00095,23,0,0,0,PHC,North-West,32,177,90,12.6,21.1,34.5,1+,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00096,17,0,0,1,Secondary,South-West,34,114,70,9.4,29.5,38.8,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00097,27,0,0,0,Secondary,South-West,26,116,73,12.3,27.4,21.3,trace,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00098,27,2,0,0,Secondary,South-South,17,111,81,15.0,23.2,16.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00099,26,1,1,0,PHC,North-Central,35,101,50,11.3,26.1,32.2,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00100,24,4,1,0,PHC,South-South,16,119,76,11.8,25.2,10.6,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00101,17,1,1,0,PHC,North-Central,17,121,84,12.7,16.0,19.4,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00102,23,0,0,0,PHC,South-West,23,163,82,11.9,16.0,20.2,2+,0,0,0,0,0,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00103,23,2,1,0,Secondary,South-East,23,119,94,11.1,20.5,23.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00104,21,3,0,1,PHC,North-West,21,143,63,10.1,27.7,25.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00105,25,0,0,1,PHC,North-East,22,96,66,10.6,18.8,21.3,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00106,28,0,0,0,PHC,South-West,34,104,75,11.8,28.7,34.0,negative,0,0,0,1,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00107,37,0,0,0,PHC,North-West,40,135,69,8.5,22.4,40.0,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00108,27,3,0,1,PHC,North-West,26,131,81,9.1,29.5,22.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00109,27,3,0,0,PHC,North-Central,27,119,66,7.1,27.2,23.8,negative,0,1,1,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00110,25,2,0,1,Secondary,North-Central,15,126,68,12.2,28.8,14.2,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00111,15,4,0,0,PHC,North-West,29,103,63,10.2,23.2,27.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00112,25,4,0,1,Secondary,South-South,40,115,84,9.1,22.7,40.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00113,26,2,0,0,Secondary,North-West,29,101,75,9.5,25.7,25.7,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00114,40,4,1,0,Tertiary,South-West,21,121,90,12.6,29.4,26.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00115,24,0,0,0,Secondary,South-West,18,128,63,9.4,20.3,16.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00116,27,0,0,0,Secondary,North-West,31,154,122,8.6,22.7,38.7,negative,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00117,25,1,0,0,PHC,North-West,11,122,66,14.4,29.4,10.0,negative,0,0,0,0,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00118,18,0,0,0,PHC,South-East,36,104,71,13.0,28.8,36.3,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00119,32,2,0,0,PHC,North-West,40,112,86,10.4,24.0,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00120,30,5,0,0,PHC,South-South,23,112,87,8.6,21.8,20.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00121,30,0,0,0,PHC,North-East,37,107,50,11.6,27.1,37.7,negative,0,0,0,0,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00122,20,0,0,0,PHC,North-Central,36,92,62,9.7,29.7,32.6,negative,0,1,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00123,34,1,0,0,Secondary,North-East,19,115,76,11.0,25.1,18.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00124,17,5,0,1,Secondary,South-South,20,116,73,7.9,23.5,19.8,negative,0,0,0,0,0,0,0,1,High,Moderate-Severe Anaemia,JA42
+ABY-00125,29,1,0,0,PHC,North-Central,19,139,65,13.4,21.1,18.9,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00126,39,2,0,0,PHC,North-West,27,132,69,11.3,29.2,26.9,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00127,20,0,1,0,PHC,North-West,25,122,79,6.1,24.6,24.9,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00128,22,0,0,0,PHC,South-West,27,104,90,12.9,23.2,26.9,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00129,26,7,0,0,PHC,North-Central,17,117,60,12.7,30.1,13.7,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00130,22,6,0,0,PHC,North-West,13,114,69,11.2,19.8,12.3,negative,0,1,0,0,0,0,0,1,High,Malaria in Pregnancy,1A44.Z
+ABY-00131,16,0,0,0,Secondary,South-West,33,130,98,12.4,25.8,30.3,negative,0,0,0,0,0,0,1,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00132,26,6,1,0,Secondary,North-Central,19,134,64,8.9,22.9,21.8,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00133,19,2,1,0,PHC,North-East,25,94,83,8.3,21.3,26.1,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00134,28,4,0,0,PHC,South-East,40,134,77,13.3,22.5,40.0,negative,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00135,20,1,0,0,Secondary,North-East,15,139,82,11.5,31.9,13.8,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00136,35,2,0,1,Secondary,South-East,31,136,82,9.6,26.8,28.2,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00137,21,2,1,0,Secondary,North-West,24,96,84,11.9,21.7,20.0,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00138,24,3,0,0,Secondary,North-West,17,126,60,5.3,17.2,17.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00139,30,0,0,0,Secondary,North-West,31,119,61,9.3,26.9,31.4,negative,0,0,0,1,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00140,18,0,0,1,Secondary,South-East,29,96,71,15.0,17.6,29.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00141,27,1,0,0,PHC,North-West,17,140,87,11.4,29.1,15.8,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00142,33,3,0,0,PHC,South-West,33,153,72,12.6,26.2,35.9,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00143,16,0,0,0,PHC,South-West,24,112,72,8.8,29.1,24.1,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00144,27,3,1,0,PHC,South-South,31,126,70,10.4,25.4,30.1,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00145,27,6,0,1,PHC,South-East,8,117,69,10.6,26.3,10.0,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00146,30,0,0,0,PHC,North-East,24,130,83,12.4,21.8,27.3,1+,0,0,0,1,0,0,0,1,Low,Routine ANC - No Significant Risk,Z34
+ABY-00147,18,3,0,0,PHC,South-East,40,103,57,12.2,24.5,37.1,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00148,18,1,1,1,Secondary,North-Central,40,146,91,11.6,27.4,40.0,3+,0,0,0,0,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00149,29,4,0,1,PHC,North-Central,15,114,62,12.0,27.1,15.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00150,27,0,0,0,PHC,South-West,34,112,75,13.6,27.7,34.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00151,27,3,0,0,PHC,South-West,30,103,65,10.7,28.1,28.6,2+,0,0,0,1,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00152,28,4,0,1,PHC,North-Central,16,104,72,11.9,21.3,16.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00153,21,6,0,0,Tertiary,North-East,18,131,76,10.6,30.4,15.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00154,27,3,0,0,PHC,North-West,18,111,75,11.1,31.4,21.7,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00155,27,2,0,0,Tertiary,North-East,28,81,75,7.6,21.6,24.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00156,21,2,0,0,Secondary,South-East,22,121,52,10.0,21.5,20.1,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00157,37,4,0,0,Secondary,South-West,30,97,61,11.2,20.2,27.2,negative,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00158,28,2,0,0,Secondary,South-East,36,112,76,11.0,33.2,36.4,negative,0,1,0,0,0,0,0,1,High,Malaria in Pregnancy,1A44.Z
+ABY-00159,18,0,0,0,Secondary,South-East,8,139,68,7.5,28.5,10.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00160,29,5,0,0,PHC,North-East,25,96,80,8.7,26.9,25.7,negative,0,0,0,0,0,0,1,0,High,Moderate-Severe Anaemia,JA42
+ABY-00161,20,3,0,0,PHC,North-Central,30,130,91,12.7,30.2,31.8,negative,0,0,1,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00162,30,3,0,0,PHC,North-East,10,142,64,13.1,18.2,10.0,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00163,32,0,0,0,PHC,South-South,24,126,71,9.2,25.5,24.2,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00164,21,3,0,0,Secondary,South-East,20,103,57,12.2,32.0,18.9,2+,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00165,31,1,0,1,Secondary,North-Central,20,107,79,10.4,20.4,18.8,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00166,28,3,1,0,Secondary,South-East,37,109,85,10.3,24.4,37.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00167,30,0,1,0,Secondary,North-West,14,103,66,10.2,24.5,13.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00168,37,3,0,0,Secondary,North-Central,40,106,74,12.4,28.9,39.6,negative,0,0,1,0,0,0,0,0,Moderate,Gestational Diabetes Risk,JA63
+ABY-00169,24,8,0,0,Secondary,South-South,35,125,79,9.1,20.0,33.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00170,21,0,0,0,Secondary,South-South,26,138,84,14.2,25.3,26.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00171,20,7,0,1,Secondary,North-West,40,113,52,10.7,23.6,40.0,1+,0,1,0,0,0,0,0,1,High,Malaria in Pregnancy,1A44.Z
+ABY-00172,21,1,0,0,PHC,South-West,40,104,74,13.1,23.4,40.0,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00173,25,4,0,1,PHC,North-Central,25,140,72,11.6,23.4,26.1,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00174,28,3,0,0,PHC,North-West,40,117,83,12.2,27.8,40.0,negative,0,0,0,0,0,0,0,1,Low,Routine ANC - No Significant Risk,Z34
+ABY-00175,27,2,0,0,PHC,North-Central,32,101,95,8.8,21.7,30.9,trace,0,0,0,0,0,0,0,1,High,Moderate-Severe Anaemia,JA42
+ABY-00176,30,3,0,0,PHC,North-Central,13,108,76,10.9,23.7,17.3,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00177,26,4,0,0,PHC,South-East,27,140,65,9.1,32.9,32.7,2+,0,1,0,0,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00178,34,1,0,1,PHC,North-East,11,80,69,12.5,26.4,12.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00179,24,1,0,0,PHC,South-South,14,121,74,12.3,26.2,16.3,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00180,42,3,0,0,PHC,North-West,36,121,82,10.2,19.1,36.5,negative,0,0,0,0,1,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00181,29,4,0,1,Secondary,North-Central,22,171,106,13.3,20.7,18.4,2+,0,0,1,0,0,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00182,20,3,0,0,PHC,North-East,23,115,70,12.6,24.3,22.2,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00183,19,4,0,0,Secondary,North-West,11,135,76,6.3,28.2,10.8,2+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00184,28,1,0,0,PHC,South-West,30,168,106,10.8,24.6,27.1,1+,0,1,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00185,24,4,0,0,Tertiary,South-West,35,115,76,10.0,20.8,33.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00186,30,0,0,0,Secondary,South-West,18,116,83,10.9,26.8,18.5,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00187,28,2,1,0,Secondary,North-Central,29,100,60,12.9,27.4,33.5,2+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00188,25,0,0,0,PHC,South-West,28,103,72,10.9,25.0,30.2,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00189,20,1,0,0,PHC,South-South,31,163,103,9.7,30.0,34.2,3+,0,1,0,0,1,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00190,16,1,0,0,PHC,North-West,19,129,70,10.6,28.1,17.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00191,23,1,0,0,Secondary,South-South,8,103,59,9.2,16.0,12.2,negative,0,1,1,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00192,31,3,0,0,Secondary,North-Central,27,103,71,9.9,17.3,29.0,trace,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00193,27,1,1,0,Secondary,North-East,40,119,57,13.8,18.4,40.0,negative,0,0,0,0,0,0,0,1,Moderate,Previous Caesarean Section,JA00
+ABY-00194,18,1,0,0,Tertiary,South-South,19,111,88,9.6,22.3,22.8,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00195,27,0,0,0,Secondary,North-West,22,106,80,8.6,26.1,22.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00196,28,1,0,0,PHC,North-West,20,121,63,10.7,19.8,21.8,3+,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00197,20,0,1,0,Secondary,North-Central,25,128,76,9.9,20.5,27.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00198,26,0,0,0,PHC,North-West,25,114,78,8.5,19.5,22.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00199,26,2,1,0,PHC,South-East,31,89,80,10.1,33.5,28.8,negative,0,0,0,1,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00200,19,3,0,0,Tertiary,North-West,39,84,71,9.4,16.0,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00201,28,2,1,0,PHC,South-South,19,131,76,14.6,25.5,20.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00202,29,1,0,0,PHC,North-East,26,80,78,7.0,26.1,25.5,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00203,32,1,0,0,Secondary,North-Central,30,108,76,12.0,27.7,31.8,2+,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00204,32,4,0,0,PHC,North-East,25,142,90,9.5,16.0,25.6,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00205,17,2,0,1,Tertiary,South-East,21,103,74,11.3,30.1,18.9,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00206,20,2,0,0,PHC,North-West,10,100,80,11.3,20.8,10.0,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00207,29,0,0,0,PHC,North-West,8,123,63,11.5,21.2,10.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00208,29,1,0,0,PHC,North-East,9,167,78,11.3,29.2,10.1,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00209,29,1,1,0,PHC,North-East,12,105,50,9.0,25.3,11.8,negative,0,0,1,0,0,0,1,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00210,45,1,0,0,Secondary,South-West,12,113,67,8.4,31.6,10.7,negative,1,0,1,0,0,0,1,0,High,Moderate-Severe Anaemia,JA42
+ABY-00211,29,2,0,0,PHC,North-West,16,117,66,13.6,25.1,14.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00212,32,2,0,0,Secondary,South-South,40,94,82,11.8,21.7,40.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00213,31,2,0,0,Secondary,North-Central,24,120,96,11.5,23.3,24.6,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00214,29,3,0,1,PHC,South-West,14,118,79,7.9,26.9,10.0,3+,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00215,24,4,0,0,PHC,South-West,9,126,68,10.4,29.1,14.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00216,30,3,0,0,PHC,North-East,28,110,82,10.3,25.3,24.5,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00217,21,6,0,0,PHC,South-South,28,127,78,9.4,29.6,25.9,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00218,24,0,0,0,PHC,South-West,29,132,76,10.9,27.3,31.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00219,23,0,0,1,PHC,North-Central,21,107,50,10.3,24.2,22.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00220,26,0,0,0,Secondary,South-West,30,115,66,4.2,18.6,35.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00221,39,2,0,0,Secondary,North-Central,30,102,64,11.3,31.4,32.9,negative,0,0,0,0,1,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00222,15,5,1,1,Secondary,North-West,22,125,65,9.3,27.8,23.5,trace,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00223,30,0,0,0,PHC,South-South,29,105,62,12.8,22.4,26.3,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00224,16,5,0,0,PHC,North-Central,39,112,65,6.1,26.2,36.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00225,23,0,0,1,Tertiary,South-South,22,119,99,8.4,29.8,25.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00226,32,5,0,0,PHC,North-West,16,91,72,10.3,18.0,17.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00227,26,1,0,0,PHC,North-West,22,134,85,9.1,25.4,22.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00228,19,0,0,0,Secondary,South-South,20,121,78,12.0,30.0,16.8,negative,0,0,1,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00229,21,2,0,0,PHC,South-South,25,125,84,8.7,27.2,25.5,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00230,30,1,0,0,Secondary,North-Central,16,146,102,9.8,21.2,21.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00231,21,1,1,0,PHC,North-West,32,161,64,8.0,25.9,32.2,negative,0,0,0,1,1,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00232,27,1,0,0,Secondary,North-Central,28,101,69,10.1,19.5,30.4,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00233,26,4,0,0,PHC,North-Central,35,118,73,12.0,27.1,34.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00234,22,2,0,0,PHC,South-West,14,119,71,10.5,21.0,18.5,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00235,38,1,0,0,PHC,North-East,19,120,77,4.8,25.3,21.8,negative,0,0,0,0,0,0,1,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00236,29,2,0,0,PHC,South-East,22,100,55,9.8,19.7,22.9,trace,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00237,15,3,0,0,Secondary,North-West,8,111,91,12.2,19.7,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00238,27,1,0,0,Secondary,North-Central,14,124,85,7.0,20.8,18.6,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00239,22,1,1,0,Secondary,South-South,17,136,67,9.1,20.6,19.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00240,31,0,0,0,PHC,North-East,29,101,62,13.0,21.2,30.9,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00241,21,0,0,0,PHC,South-South,24,108,75,8.1,19.7,25.7,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00242,25,3,0,0,Tertiary,South-West,31,125,84,14.0,28.2,30.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00243,29,0,1,0,PHC,North-West,15,122,79,10.6,23.3,14.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00244,31,2,0,1,PHC,North-Central,32,105,72,10.0,35.3,28.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00245,18,3,0,0,PHC,South-West,9,117,82,9.9,19.9,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00246,23,0,0,1,PHC,South-East,29,124,67,11.2,22.3,30.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00247,23,2,0,0,PHC,North-East,36,128,78,10.6,23.0,35.6,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00248,22,1,0,0,PHC,North-East,22,118,71,10.4,29.9,20.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00249,36,6,0,1,Tertiary,North-West,24,133,66,9.0,27.3,26.1,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00250,28,2,0,0,PHC,South-South,29,136,72,12.0,21.1,27.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00251,18,4,0,0,Secondary,South-West,21,121,73,12.4,21.9,22.1,negative,0,0,0,0,0,0,0,1,Low,Routine ANC - No Significant Risk,Z34
+ABY-00252,31,2,0,0,Secondary,South-South,10,145,86,6.2,24.0,11.6,negative,0,0,0,0,0,0,1,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00253,38,0,0,0,PHC,North-Central,12,131,101,9.0,20.3,13.9,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00254,32,2,0,1,Secondary,North-East,16,101,67,10.4,22.5,17.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00255,16,6,0,0,PHC,North-East,17,96,67,9.3,19.2,17.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00256,23,2,1,0,PHC,North-West,26,123,66,14.0,31.6,29.1,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00257,33,4,1,0,PHC,North-Central,18,120,66,12.9,21.4,20.6,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00258,21,5,0,1,Secondary,South-East,39,116,74,6.4,26.6,40.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00259,28,0,0,0,Secondary,South-West,32,101,89,14.0,29.1,32.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00260,30,0,0,0,Secondary,North-East,31,109,83,10.7,26.7,29.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00261,20,2,1,0,Tertiary,South-West,19,115,79,12.4,31.2,16.2,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00262,25,1,0,0,PHC,South-East,39,130,69,8.4,27.4,39.8,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00263,15,4,1,0,PHC,South-West,25,146,110,10.2,26.6,28.9,trace,0,0,0,0,0,0,1,0,Critical,Antepartum Haemorrhage / Placenta Risk,JA60
+ABY-00264,19,5,0,0,Secondary,North-West,22,121,63,9.7,22.7,25.4,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00265,24,1,0,0,Secondary,North-West,14,92,76,6.7,16.6,13.8,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00266,18,0,0,0,Tertiary,North-West,40,125,68,6.1,18.7,36.5,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00267,35,3,0,1,PHC,North-Central,35,117,75,12.5,24.3,33.1,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00268,17,1,0,0,Secondary,South-South,13,134,75,15.0,30.9,18.4,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00269,23,4,0,0,PHC,South-West,18,123,59,9.4,16.1,19.7,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00270,26,1,0,0,PHC,North-West,26,117,81,13.4,26.9,28.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00271,34,3,0,1,PHC,South-South,40,118,70,13.2,33.2,40.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00272,17,0,0,0,Secondary,North-West,40,105,63,10.9,27.7,39.7,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00273,32,2,1,0,Secondary,South-East,40,106,91,10.4,23.8,36.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00274,26,1,0,0,Secondary,North-West,29,103,75,13.9,16.1,28.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00275,20,2,0,0,PHC,South-East,16,141,75,12.0,23.3,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00276,28,0,0,0,PHC,South-South,24,159,100,12.7,16.9,24.5,trace,0,0,1,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00277,27,3,0,1,PHC,South-East,30,136,81,10.1,19.2,29.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00278,22,4,0,0,PHC,North-West,35,121,69,13.4,29.3,36.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00279,26,0,0,0,Tertiary,North-West,37,119,76,8.0,18.0,36.8,negative,0,0,0,0,0,0,1,0,High,Moderate-Severe Anaemia,JA42
+ABY-00280,23,0,0,0,PHC,North-West,33,119,72,9.4,27.3,29.0,negative,0,0,0,0,0,0,1,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00281,26,0,0,0,Secondary,North-West,36,115,72,14.2,24.6,37.0,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00282,29,2,0,0,PHC,North-Central,31,145,94,8.3,23.3,34.3,trace,0,0,0,1,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00283,35,2,0,0,Secondary,North-West,26,150,110,8.6,31.5,29.4,trace,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00284,18,2,1,0,PHC,South-West,23,114,89,10.5,25.2,22.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00285,38,0,0,0,PHC,South-South,24,105,81,10.4,17.5,25.7,trace,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00286,15,1,0,0,Secondary,South-South,27,125,69,10.2,24.4,24.7,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00287,25,2,0,0,Secondary,North-Central,28,99,88,8.6,25.5,30.6,1+,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00288,29,2,0,0,Secondary,South-East,22,130,93,8.3,29.1,17.2,2+,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00289,27,7,0,0,PHC,North-Central,24,118,73,10.1,28.0,26.3,negative,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00290,22,0,0,0,Secondary,North-Central,24,102,83,7.5,23.9,21.3,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00291,24,3,1,1,Tertiary,South-East,9,113,73,10.9,19.8,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00292,23,1,0,1,PHC,South-East,30,110,54,8.9,19.5,32.2,negative,0,1,0,1,0,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00293,22,1,0,0,Secondary,South-West,30,132,71,10.8,23.3,27.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00294,31,3,1,1,Secondary,North-West,33,106,80,10.9,32.4,33.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00295,28,3,0,0,Secondary,South-West,30,118,76,10.9,22.4,27.9,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00296,21,8,0,0,PHC,North-East,22,125,72,9.9,18.7,18.6,trace,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00297,31,0,1,0,PHC,North-West,27,102,54,11.1,28.5,28.2,negative,0,0,0,0,0,0,1,0,Critical,Antepartum Haemorrhage / Placenta Risk,JA60
+ABY-00298,27,0,0,0,PHC,North-Central,20,115,77,8.7,19.9,18.9,negative,1,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00299,30,3,0,0,Tertiary,South-South,30,110,81,6.1,26.1,31.8,trace,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00300,29,2,0,1,PHC,South-South,23,98,76,12.5,28.7,21.4,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00301,21,1,0,0,PHC,North-Central,30,132,116,13.9,34.6,26.5,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00302,22,0,0,0,PHC,North-East,31,107,67,8.7,28.4,27.8,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00303,30,0,0,1,Tertiary,North-East,8,107,73,13.1,27.2,10.0,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00304,29,5,0,0,Secondary,South-East,33,154,112,9.7,29.0,33.9,2+,0,0,0,0,1,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00305,25,0,0,0,Secondary,North-Central,40,120,71,11.4,19.4,38.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00306,26,1,0,0,Secondary,South-West,26,119,57,7.0,28.3,23.9,trace,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00307,33,0,0,1,Secondary,North-Central,25,173,115,11.3,26.9,25.1,negative,0,0,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00308,22,1,0,0,PHC,North-West,9,123,100,13.0,31.6,10.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00309,29,0,0,0,PHC,North-West,11,111,68,8.5,21.1,12.3,trace,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00310,24,2,0,0,PHC,North-Central,8,119,74,5.1,26.6,10.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00311,24,0,0,0,PHC,South-West,10,129,82,11.1,27.4,11.5,trace,0,1,0,0,0,0,0,1,High,Malaria in Pregnancy,1A44.Z
+ABY-00312,32,4,0,0,PHC,North-East,21,122,59,13.8,19.1,18.1,1+,0,0,0,1,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00313,30,0,0,0,Secondary,South-South,27,100,69,9.3,35.4,22.1,negative,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00314,30,2,0,0,PHC,South-West,27,103,61,10.1,28.6,28.4,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00315,33,5,0,0,PHC,South-East,27,110,80,9.6,22.6,31.5,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00316,26,3,0,1,Secondary,South-South,33,114,73,10.7,20.0,31.4,negative,0,1,0,1,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00317,30,2,0,0,PHC,North-Central,40,120,86,11.2,23.3,40.0,negative,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00318,24,1,1,0,PHC,South-West,21,134,74,8.7,16.0,17.8,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00319,27,1,0,0,PHC,North-West,29,121,70,9.5,16.0,32.0,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00320,25,3,0,0,PHC,South-East,25,108,83,9.9,29.6,24.3,negative,0,1,1,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00321,26,8,0,0,PHC,South-West,37,110,79,9.8,24.0,33.4,negative,0,0,0,1,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00322,29,3,0,1,Secondary,North-West,36,104,64,6.4,30.6,38.5,negative,0,1,0,0,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00323,21,2,0,0,Secondary,South-West,20,126,77,11.7,16.9,16.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00324,38,3,1,1,PHC,South-South,23,135,51,11.2,17.8,23.7,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00325,19,1,0,1,PHC,North-East,23,143,70,7.6,22.9,25.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00326,18,0,0,0,PHC,North-Central,27,122,87,9.0,31.8,26.5,negative,1,0,0,0,0,0,0,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00327,32,2,0,0,PHC,South-West,28,130,68,7.5,21.4,29.8,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00328,30,6,0,0,Secondary,North-West,29,108,85,12.8,24.1,28.4,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00329,29,0,0,1,PHC,North-Central,21,117,68,12.9,30.9,25.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00330,29,3,0,0,PHC,South-South,14,162,88,6.7,21.2,12.2,1+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00331,25,0,1,0,PHC,North-Central,22,117,85,8.8,29.9,20.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00332,20,2,0,0,Secondary,South-South,40,116,68,11.3,26.3,40.0,trace,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00333,26,0,0,1,Secondary,North-West,30,98,78,11.5,20.6,28.2,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00334,21,1,0,0,PHC,North-West,20,113,84,8.5,30.5,19.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00335,31,3,0,0,Secondary,South-East,28,106,75,6.5,23.2,24.9,trace,0,0,0,0,0,1,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00336,25,1,0,0,Secondary,South-West,19,110,66,9.2,22.2,18.0,negative,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00337,21,3,0,0,PHC,South-East,28,101,94,9.1,23.7,28.9,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00338,24,4,0,0,PHC,South-West,18,115,76,10.0,25.8,17.7,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00339,28,5,0,0,Tertiary,South-West,24,124,78,11.4,23.7,22.7,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00340,22,0,0,0,PHC,North-Central,40,118,82,11.3,29.3,36.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00341,21,1,0,0,PHC,North-West,23,121,69,6.7,27.8,22.5,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00342,27,0,0,0,Tertiary,North-Central,28,114,69,13.5,16.0,27.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00343,27,8,0,0,PHC,South-South,40,113,71,7.5,27.4,40.0,negative,0,1,0,1,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00344,22,5,0,0,PHC,North-West,40,151,100,9.4,29.1,38.9,negative,0,0,1,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00345,23,2,1,0,PHC,North-West,38,111,75,12.5,30.1,31.0,negative,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00346,27,4,0,0,Secondary,North-West,14,116,58,11.4,29.3,16.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00347,17,2,0,0,PHC,South-West,40,140,77,7.6,22.9,40.0,negative,0,1,0,1,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00348,17,2,0,0,Secondary,North-West,16,104,77,8.0,26.2,15.3,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00349,21,0,0,0,PHC,North-West,18,112,80,5.9,31.4,20.4,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00350,24,3,0,0,PHC,South-West,36,108,76,10.3,25.4,38.7,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00351,27,0,0,0,Tertiary,South-East,20,140,88,11.2,25.8,19.1,1+,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00352,34,4,1,0,PHC,South-East,22,132,69,9.2,24.8,19.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00353,31,3,0,0,PHC,North-East,27,155,98,12.3,21.3,24.2,trace,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00354,25,3,0,0,PHC,North-West,33,120,66,9.4,29.1,33.1,negative,0,1,0,1,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00355,25,0,0,1,PHC,North-Central,21,95,88,9.4,24.3,23.3,trace,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00356,19,1,1,0,PHC,South-East,21,135,80,14.3,26.6,21.7,trace,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00357,25,1,0,0,PHC,North-West,32,164,101,13.6,29.5,30.7,2+,0,0,1,0,1,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00358,24,1,0,0,PHC,North-East,26,108,76,11.0,21.0,27.3,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00359,27,0,0,0,PHC,South-West,31,86,84,12.3,24.5,33.3,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00360,21,5,1,0,Tertiary,South-West,28,131,81,11.3,21.7,28.8,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00361,29,2,0,0,Secondary,North-West,36,126,79,8.8,30.3,33.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00362,35,1,0,0,PHC,North-Central,30,184,91,11.3,22.0,27.1,negative,0,0,0,1,1,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00363,25,1,0,0,PHC,North-East,23,80,66,11.0,26.7,27.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00364,28,1,1,0,PHC,North-Central,24,177,74,11.4,30.0,19.4,2+,0,1,0,0,0,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00365,30,2,0,0,Secondary,North-West,34,143,82,6.4,26.8,33.7,negative,0,0,0,1,0,0,1,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00366,23,2,0,0,PHC,South-West,30,126,82,11.5,24.5,28.2,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00367,27,5,0,0,PHC,North-East,27,133,82,9.8,32.3,27.6,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00368,26,2,0,0,PHC,North-Central,30,111,76,10.4,29.0,27.8,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00369,26,8,0,0,Secondary,North-Central,17,104,74,13.8,24.9,21.4,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00370,21,4,1,0,PHC,South-East,23,90,66,10.9,21.4,20.4,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00371,26,0,0,0,Secondary,South-West,24,111,75,13.4,18.8,17.9,negative,0,1,0,1,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00372,28,5,0,1,PHC,North-East,28,134,64,8.8,24.7,30.8,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00373,34,0,0,0,PHC,North-Central,21,98,69,9.4,38.2,21.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00374,31,4,0,0,Secondary,South-West,33,108,70,12.6,16.0,28.7,negative,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00375,38,1,0,0,Tertiary,North-East,30,88,73,11.4,22.7,30.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00376,21,4,0,0,Tertiary,North-Central,28,121,82,11.5,32.0,29.9,negative,0,0,1,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00377,31,4,1,0,Secondary,North-Central,14,126,73,9.2,22.9,15.4,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00378,27,4,0,1,Secondary,North-East,24,93,69,9.6,19.7,28.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00379,39,4,0,1,Secondary,North-Central,22,126,80,12.7,24.8,19.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00380,21,1,0,0,PHC,South-East,17,118,74,9.1,18.6,16.5,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00381,20,0,0,0,Secondary,North-East,28,170,121,8.6,23.2,26.6,negative,0,1,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00382,22,1,0,0,Secondary,North-Central,40,94,61,14.1,22.6,40.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00383,15,0,0,0,PHC,South-West,22,122,71,13.0,19.3,21.2,negative,0,1,1,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00384,22,3,0,0,Secondary,South-South,20,172,86,10.3,31.0,21.3,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00385,21,1,0,0,Secondary,North-West,32,113,82,11.6,26.3,34.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00386,26,7,0,0,PHC,North-East,40,137,62,8.4,25.0,40.0,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00387,28,2,0,1,Secondary,South-West,21,165,87,10.8,23.5,21.2,3+,0,0,0,1,0,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00388,37,4,0,0,PHC,South-South,25,120,61,13.3,27.0,25.2,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00389,31,0,0,0,PHC,South-South,21,113,97,12.2,32.7,18.3,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00390,22,4,0,0,PHC,North-West,27,129,112,6.5,18.6,28.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00391,20,5,0,0,Secondary,South-West,9,144,91,8.5,19.6,10.0,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00392,28,2,0,0,Secondary,North-East,28,114,72,10.3,26.5,23.8,trace,0,0,0,0,0,0,0,1,High,Fetal Growth Restriction,JA65
+ABY-00393,18,2,0,0,PHC,South-South,26,96,60,10.2,20.3,30.1,trace,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00394,36,3,0,0,Secondary,South-South,24,143,77,8.9,17.2,21.5,1+,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00395,33,0,0,0,PHC,North-West,11,101,63,8.9,23.2,11.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00396,23,2,0,0,PHC,North-West,16,120,77,12.4,20.9,15.3,3+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00397,15,1,0,0,PHC,North-Central,19,152,109,9.3,16.2,16.6,trace,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00398,34,0,0,0,PHC,South-West,20,124,57,8.0,22.5,16.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00399,25,1,0,0,Secondary,South-East,27,115,59,9.2,25.3,29.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00400,33,0,0,0,Secondary,North-West,31,135,74,11.2,21.3,34.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00401,16,0,0,1,PHC,South-West,15,104,66,5.9,24.5,15.6,negative,1,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00402,22,0,0,0,PHC,North-West,40,100,67,10.9,28.7,40.0,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00403,26,6,0,0,PHC,North-East,38,114,73,8.6,33.1,34.0,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00404,26,2,0,0,Secondary,South-West,26,107,51,11.1,23.6,23.0,1+,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00405,23,6,0,0,PHC,South-South,31,127,61,10.5,25.9,30.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00406,29,1,1,0,Secondary,South-West,29,113,76,6.0,20.2,31.5,negative,0,0,0,0,0,0,1,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00407,19,1,1,0,Tertiary,North-Central,40,134,81,13.1,24.7,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00408,25,2,1,0,PHC,North-West,30,120,81,10.0,31.9,29.9,2+,0,0,0,0,0,0,1,0,Critical,Antepartum Haemorrhage / Placenta Risk,JA60
+ABY-00409,26,1,1,0,PHC,South-South,8,100,70,10.2,19.9,10.0,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00410,29,0,0,0,PHC,North-East,21,96,77,9.6,26.4,22.6,2+,0,0,0,0,0,0,1,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00411,30,2,0,0,Tertiary,South-West,28,113,77,13.1,20.0,26.2,negative,0,0,0,0,0,0,0,1,Low,Routine ANC - No Significant Risk,Z34
+ABY-00412,19,0,0,0,PHC,South-West,31,93,84,9.0,21.8,32.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00413,16,2,0,0,PHC,North-West,34,96,71,13.9,18.0,35.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00414,33,3,0,1,Secondary,South-West,33,116,50,6.9,27.7,36.1,negative,0,0,1,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00415,27,0,0,0,PHC,South-West,24,115,97,10.2,22.3,24.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00416,21,0,0,0,Secondary,North-East,30,130,73,10.1,29.1,32.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00417,35,3,0,0,PHC,North-Central,19,136,84,10.4,27.3,21.0,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00418,26,1,0,0,Secondary,North-East,16,115,71,10.9,29.3,20.5,negative,0,0,1,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00419,33,0,0,0,Tertiary,North-East,21,112,70,12.0,25.8,24.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00420,26,8,0,0,PHC,South-South,40,123,70,10.2,27.0,36.1,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00421,38,0,0,0,Tertiary,South-East,28,98,58,10.1,20.1,29.9,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00422,36,3,0,1,Secondary,North-Central,12,146,98,11.7,27.5,15.6,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00423,24,7,0,0,Secondary,South-South,19,124,111,11.2,23.9,18.9,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00424,31,0,0,0,Secondary,South-South,20,127,76,7.6,33.3,16.5,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00425,29,0,0,0,PHC,North-West,31,112,50,8.6,20.3,34.2,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00426,34,0,0,0,Secondary,South-West,38,106,76,9.8,24.6,38.2,trace,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00427,20,1,1,0,PHC,South-East,18,112,64,11.4,27.1,18.8,negative,0,1,1,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00428,30,0,0,0,PHC,North-East,36,99,71,7.7,25.9,33.5,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00429,32,3,1,0,PHC,South-West,25,111,77,8.6,17.1,23.2,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00430,15,0,0,0,Secondary,North-East,30,105,94,12.9,22.9,28.5,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00431,18,2,1,0,PHC,North-East,11,123,63,9.6,19.1,11.6,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00432,15,8,0,1,Secondary,North-West,23,159,124,9.2,30.9,19.2,trace,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00433,24,4,0,1,Tertiary,South-East,33,132,81,13.1,27.6,31.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00434,30,2,0,0,Secondary,South-West,22,109,76,10.0,24.8,24.5,1+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00435,35,1,0,0,PHC,South-West,39,139,81,12.0,28.1,35.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00436,26,2,1,1,Secondary,North-West,23,125,80,10.8,27.4,20.1,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00437,35,2,0,0,Secondary,South-West,16,95,76,10.3,32.0,20.7,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00438,17,1,0,1,PHC,South-West,17,117,69,13.6,23.7,16.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00439,15,0,0,0,PHC,South-East,16,111,80,13.0,19.0,19.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00440,25,5,0,0,Secondary,North-Central,31,105,76,9.6,32.2,29.9,3+,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00441,28,1,0,0,Secondary,South-South,27,116,78,11.7,29.2,27.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00442,25,0,0,0,Secondary,South-South,25,80,54,11.3,25.9,20.0,negative,0,0,0,0,0,0,0,1,High,Fetal Growth Restriction,JA65
+ABY-00443,15,1,0,0,Secondary,South-East,32,129,74,12.9,23.1,39.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00444,25,1,0,1,Secondary,South-East,25,91,50,10.5,31.8,25.3,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00445,18,4,0,0,PHC,South-South,32,131,54,10.4,20.3,33.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00446,30,3,0,0,Secondary,North-Central,28,108,71,7.8,27.9,29.8,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00447,28,3,0,0,Secondary,South-West,20,99,65,9.8,34.9,18.2,2+,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00448,20,0,0,0,Tertiary,North-East,36,114,55,9.9,22.9,33.0,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00449,22,1,1,0,Tertiary,South-West,40,125,64,11.4,28.6,39.9,negative,0,1,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00450,19,2,0,0,PHC,North-West,25,145,70,11.2,18.5,25.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00451,25,0,0,0,PHC,South-South,13,112,74,8.6,20.9,14.5,trace,0,1,1,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00452,31,1,0,0,PHC,South-West,15,108,86,8.9,17.2,17.6,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00453,20,3,0,0,Secondary,North-East,20,117,53,9.7,21.5,14.9,negative,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00454,29,0,0,0,PHC,North-West,16,124,91,10.5,32.9,12.9,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00455,22,2,0,0,PHC,South-West,20,116,84,6.3,29.0,19.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00456,21,0,0,0,Secondary,South-East,8,106,93,11.5,38.5,10.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00457,25,0,0,0,Secondary,South-South,33,138,87,10.9,29.0,33.6,negative,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00458,19,0,0,0,PHC,North-West,25,128,74,13.6,19.8,26.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00459,22,7,1,0,PHC,North-West,32,122,50,11.6,28.1,35.9,negative,0,0,0,1,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00460,18,4,0,0,PHC,South-East,28,118,80,8.9,18.9,29.7,trace,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00461,37,6,1,1,PHC,North-Central,25,144,82,13.3,25.8,26.1,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00462,26,2,0,0,Secondary,North-Central,15,109,61,8.5,27.2,15.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00463,21,0,0,0,Tertiary,North-Central,36,101,85,8.9,19.0,39.1,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00464,27,2,0,1,PHC,South-East,14,133,84,11.3,24.8,13.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00465,25,1,0,0,Tertiary,North-Central,23,121,75,11.9,22.6,24.3,trace,0,0,0,0,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00466,24,4,0,0,Secondary,South-East,35,92,84,9.0,28.4,32.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00467,29,0,0,1,PHC,North-West,18,97,77,11.3,24.6,16.3,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00468,30,2,1,0,Secondary,North-Central,23,106,55,11.7,27.0,24.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00469,22,0,1,0,PHC,North-West,21,140,83,10.7,23.3,22.3,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00470,22,1,0,0,Secondary,North-West,29,145,71,9.5,19.4,32.1,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00471,24,3,0,0,PHC,South-West,25,127,84,8.9,16.0,25.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00472,15,2,0,0,Secondary,North-West,24,124,87,11.5,24.7,26.4,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00473,16,1,0,0,Secondary,North-West,34,129,93,10.8,22.9,33.5,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00474,34,1,0,0,Secondary,North-Central,34,115,60,6.7,31.9,34.7,negative,0,0,0,1,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00475,35,1,0,0,Secondary,North-Central,13,99,66,8.9,28.6,14.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00476,24,3,0,1,PHC,South-East,38,117,74,11.3,30.7,37.2,negative,0,0,0,0,1,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00477,29,5,0,0,PHC,North-Central,17,99,65,6.8,26.5,21.9,negative,0,0,1,1,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00478,27,6,1,0,Secondary,South-East,40,128,82,7.4,26.8,40.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00479,44,3,0,1,PHC,South-West,35,104,86,13.6,18.2,36.4,negative,0,0,0,0,1,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00480,32,1,0,0,Secondary,North-East,32,144,71,11.3,19.9,32.9,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00481,25,3,1,0,PHC,South-West,30,163,100,6.7,25.1,35.0,negative,0,0,0,1,0,1,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00482,20,1,0,0,Secondary,North-West,23,103,87,11.3,20.8,21.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00483,16,1,0,0,Secondary,South-West,11,128,85,5.8,21.7,11.1,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00484,27,4,1,0,Secondary,South-East,27,153,93,10.7,32.5,25.6,2+,0,1,0,1,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00485,21,0,0,1,PHC,North-West,16,124,73,7.6,20.7,16.1,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00486,17,5,0,0,PHC,South-East,36,129,63,11.1,20.8,31.4,trace,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00487,22,1,0,1,PHC,North-West,30,141,54,11.4,28.9,30.4,negative,0,1,0,1,1,1,1,0,High,Reduced Fetal Movement,JA65
+ABY-00488,19,2,0,0,PHC,South-East,14,122,71,9.5,34.9,11.1,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00489,36,3,0,0,PHC,South-South,16,97,51,12.7,26.4,14.5,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00490,31,5,0,0,Secondary,South-East,36,163,91,10.7,26.1,33.8,negative,0,1,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00491,25,2,0,0,Secondary,North-West,16,116,88,9.5,22.8,20.7,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00492,34,2,0,0,Secondary,South-South,21,150,113,12.9,21.3,17.3,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00493,26,0,0,0,Tertiary,South-West,34,112,83,10.8,29.5,34.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00494,20,2,1,0,Tertiary,North-East,22,133,74,12.3,17.6,21.7,negative,0,0,1,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00495,35,0,0,0,Tertiary,South-South,29,107,64,8.7,17.9,25.6,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00496,29,3,0,0,Tertiary,North-East,19,185,86,9.3,21.9,18.9,1+,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00497,19,2,0,0,PHC,North-West,29,101,66,11.8,17.9,28.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00498,24,3,0,0,PHC,North-West,29,117,85,5.5,20.1,31.1,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00499,20,0,0,0,Tertiary,North-Central,32,125,87,8.4,28.1,34.5,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00500,17,0,0,0,PHC,South-South,20,115,64,14.0,22.1,19.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00501,31,3,0,0,Secondary,North-West,22,113,85,11.2,30.5,22.5,negative,0,0,0,1,0,0,0,1,Moderate,Obesity in Pregnancy,JA00
+ABY-00502,37,0,0,0,Tertiary,North-Central,11,86,72,9.6,30.1,14.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00503,17,0,0,0,Secondary,South-West,17,123,61,10.8,22.2,14.7,2+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00504,29,0,0,0,PHC,North-West,36,112,82,9.9,17.0,35.7,1+,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00505,22,6,0,1,PHC,South-East,29,118,78,12.3,32.3,25.8,negative,0,0,0,0,1,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00506,23,3,0,1,PHC,North-Central,23,122,72,13.2,28.4,19.2,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00507,22,1,0,0,Secondary,South-East,18,108,68,11.1,29.2,19.0,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00508,20,1,0,0,PHC,South-East,28,143,78,10.7,22.7,24.7,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00509,26,1,0,0,PHC,North-Central,22,110,77,10.8,19.2,22.9,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00510,21,3,0,0,PHC,South-West,12,130,78,8.4,26.4,13.9,2+,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00511,27,3,0,1,PHC,South-East,13,163,91,11.6,22.8,12.5,negative,1,0,0,0,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00512,25,0,0,0,Secondary,South-West,20,103,74,10.6,23.5,22.9,negative,1,0,0,0,1,0,0,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00513,24,0,1,0,PHC,North-West,23,116,65,9.6,21.1,22.1,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00514,20,0,0,0,PHC,North-West,21,123,86,8.8,19.3,16.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00515,22,3,0,0,Secondary,North-East,31,139,79,10.7,26.6,30.2,1+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00516,30,3,0,0,PHC,North-East,36,122,78,10.0,29.3,34.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00517,29,1,1,0,PHC,South-East,26,109,62,12.5,20.0,25.0,negative,0,0,1,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00518,20,0,0,0,PHC,South-West,22,110,77,12.5,22.2,20.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00519,26,0,0,0,PHC,North-East,22,141,78,10.0,26.6,23.9,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00520,30,6,0,0,PHC,North-West,29,112,74,10.3,25.0,35.0,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00521,15,1,1,0,Tertiary,South-South,37,118,81,11.4,21.1,37.7,negative,0,0,1,0,1,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00522,29,3,0,0,PHC,South-West,35,102,62,10.9,18.8,33.3,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00523,22,2,0,0,Secondary,North-Central,12,177,81,9.0,30.2,15.5,2+,0,0,0,1,0,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00524,29,1,0,0,Secondary,North-Central,28,155,84,8.3,18.3,30.2,2+,0,0,0,1,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00525,21,0,0,0,Secondary,South-West,19,109,83,11.1,26.1,18.5,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00526,15,0,0,0,PHC,South-East,16,115,71,11.6,21.6,21.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00527,16,2,1,1,Tertiary,North-East,14,151,113,9.3,18.3,16.9,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00528,26,3,0,0,Secondary,North-West,22,87,75,9.1,19.0,22.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00529,27,2,0,0,Secondary,North-Central,18,92,68,12.5,28.8,15.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00530,20,2,0,0,PHC,South-West,33,105,81,8.5,19.2,30.1,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00531,29,0,0,0,Secondary,North-Central,40,120,82,7.7,27.3,39.7,1+,0,0,0,0,0,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00532,16,6,0,0,PHC,South-East,33,104,72,12.0,28.4,30.0,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00533,25,4,0,0,PHC,South-West,24,107,85,11.4,26.3,25.3,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00534,18,1,1,0,PHC,South-South,30,96,84,10.3,20.3,28.5,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00535,22,7,1,0,PHC,North-Central,33,158,110,8.1,29.7,31.9,negative,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00536,26,2,0,1,PHC,South-South,30,105,60,9.3,25.5,30.2,1+,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00537,20,2,0,1,PHC,South-West,31,108,58,8.3,16.0,30.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00538,23,3,1,0,PHC,North-Central,18,119,81,8.3,22.3,18.2,negative,0,0,0,0,0,0,0,1,High,Moderate-Severe Anaemia,JA42
+ABY-00539,32,4,1,0,PHC,North-East,40,122,70,10.7,26.0,38.2,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00540,22,3,0,1,Secondary,North-Central,33,119,68,11.8,26.5,32.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00541,31,0,0,1,PHC,North-West,18,122,59,10.4,28.7,16.9,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00542,19,1,1,0,PHC,North-Central,23,138,85,13.7,26.4,26.6,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00543,29,5,0,0,PHC,North-West,8,109,78,10.0,23.2,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00544,34,0,0,0,Secondary,North-Central,38,106,79,11.7,29.7,31.0,negative,0,0,0,0,0,1,0,0,High,Fetal Growth Restriction,JA65
+ABY-00545,15,1,0,0,Secondary,North-East,20,90,78,9.9,24.3,17.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00546,21,1,0,0,PHC,South-East,28,116,99,9.7,26.5,29.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00547,29,1,0,0,Secondary,North-Central,19,113,73,12.2,29.3,20.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00548,24,2,0,1,PHC,South-East,23,140,74,13.2,23.1,22.6,negative,0,1,0,1,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00549,28,6,1,0,Tertiary,North-Central,39,122,63,14.6,25.7,40.0,negative,0,0,0,1,0,0,1,1,Critical,Antepartum Haemorrhage / Placenta Risk,JA60
+ABY-00550,22,0,0,1,PHC,North-East,34,115,70,10.9,26.8,35.9,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00551,26,0,0,0,Secondary,North-East,33,118,91,10.4,20.7,34.6,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00552,25,0,0,0,PHC,North-Central,28,149,96,8.7,27.4,26.6,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00553,33,5,1,0,Secondary,North-West,19,89,72,9.5,19.6,20.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00554,27,2,0,0,PHC,South-South,31,117,73,11.6,19.8,28.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00555,28,1,0,0,PHC,South-West,30,154,79,12.3,16.0,30.3,3+,0,0,0,1,1,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00556,23,4,0,0,Tertiary,North-West,29,99,78,10.0,24.4,31.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00557,23,4,1,0,Secondary,South-West,27,103,53,11.2,23.6,23.9,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00558,23,4,0,0,Tertiary,South-South,19,194,108,10.8,27.3,19.9,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00559,28,5,0,0,Secondary,South-West,27,118,90,11.2,24.6,26.6,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00560,23,1,0,0,PHC,South-East,33,115,64,10.1,20.3,31.6,negative,0,0,0,0,1,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00561,27,3,0,0,PHC,South-West,8,125,62,10.8,28.1,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00562,38,1,0,1,Tertiary,South-South,23,107,64,10.4,21.3,24.4,3+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00563,31,4,1,0,Secondary,North-East,26,115,89,8.5,16.0,22.2,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00564,24,3,0,0,PHC,South-South,22,106,75,12.3,25.5,21.0,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00565,33,3,0,0,Secondary,South-West,32,112,78,10.2,19.1,30.7,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00566,23,3,0,0,Tertiary,North-Central,35,159,91,10.8,18.7,31.7,2+,0,0,0,0,1,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00567,15,0,0,0,PHC,North-West,22,111,60,6.9,29.4,22.5,negative,0,1,0,0,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00568,19,2,0,0,PHC,North-West,32,148,115,14.6,25.9,34.6,1+,0,0,0,1,1,1,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00569,15,7,0,0,PHC,South-West,8,100,70,14.0,27.5,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00570,23,5,0,0,Secondary,North-West,19,125,70,11.7,18.5,20.9,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00571,26,0,0,0,PHC,North-East,17,120,71,12.0,16.0,20.6,2+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00572,36,0,0,0,PHC,North-Central,30,108,83,12.0,25.8,28.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00573,27,0,1,0,Secondary,North-Central,22,123,63,9.7,28.9,18.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00574,24,3,0,0,PHC,North-West,33,116,76,10.0,20.5,30.3,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00575,30,4,0,0,Secondary,North-Central,18,114,67,6.0,22.8,18.9,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00576,15,0,0,0,PHC,South-South,18,121,75,11.8,16.0,14.6,1+,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00577,27,2,1,0,PHC,South-West,22,104,65,9.2,29.7,25.3,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00578,30,4,0,0,PHC,South-East,24,138,79,9.6,22.3,24.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00579,17,3,0,0,PHC,South-South,19,131,59,12.9,21.8,13.7,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00580,32,2,0,0,PHC,North-West,29,130,85,5.3,17.9,28.1,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00581,28,2,0,0,Secondary,North-East,32,132,67,12.0,18.4,33.8,negative,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00582,23,2,0,1,Secondary,North-Central,16,127,80,9.8,19.0,15.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00583,29,1,0,0,Secondary,South-West,40,90,65,13.8,20.7,38.2,trace,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00584,39,2,0,0,Secondary,South-East,29,110,89,11.7,24.4,30.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00585,27,3,0,0,PHC,South-South,27,105,91,8.4,31.1,24.4,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00586,27,4,0,1,PHC,North-East,13,165,98,12.0,30.8,13.8,negative,0,0,1,0,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00587,23,2,0,0,Tertiary,South-West,32,131,104,11.8,23.2,33.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00588,20,3,0,0,PHC,North-Central,13,118,60,11.9,25.4,14.6,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00589,30,0,0,0,PHC,North-West,37,113,51,9.2,23.0,35.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00590,20,1,0,0,PHC,North-West,24,105,80,5.7,30.1,28.1,negative,0,0,1,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00591,26,0,0,0,PHC,North-Central,29,138,94,10.2,25.3,28.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00592,23,0,0,0,Secondary,South-East,28,101,63,8.8,26.6,27.6,trace,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00593,28,3,1,1,Secondary,South-West,18,114,62,8.8,23.7,18.8,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00594,28,8,1,0,PHC,South-East,18,172,97,9.4,25.9,19.2,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00595,32,0,0,0,Secondary,North-West,20,112,75,11.8,26.0,20.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00596,22,1,0,0,PHC,North-West,34,130,84,10.0,32.6,34.6,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00597,24,4,1,0,PHC,South-East,33,133,78,10.0,18.5,32.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00598,20,0,1,0,Secondary,South-West,34,143,80,9.9,17.5,35.2,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00599,23,2,0,1,PHC,South-West,35,133,72,10.9,26.5,35.7,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00600,28,3,0,0,Secondary,South-West,18,111,63,12.3,33.8,19.9,negative,0,0,0,0,0,0,0,1,Moderate,Obesity in Pregnancy,JA00
+ABY-00601,30,2,0,1,PHC,North-East,34,89,74,12.2,18.1,35.7,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00602,20,0,0,0,Tertiary,North-West,22,92,83,7.9,23.8,21.5,negative,0,0,0,0,0,0,0,1,High,Moderate-Severe Anaemia,JA42
+ABY-00603,31,1,0,0,PHC,North-East,24,129,103,10.1,28.5,24.7,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00604,34,3,1,0,PHC,South-West,19,108,75,8.7,23.3,17.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00605,28,2,0,0,Secondary,South-South,24,124,75,8.7,27.9,27.6,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00606,37,0,0,0,Secondary,South-South,26,95,95,6.8,27.8,20.8,negative,0,1,1,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00607,21,3,1,0,Secondary,North-West,27,110,73,13.5,26.2,28.0,1+,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00608,18,0,0,0,Tertiary,South-West,28,168,112,10.3,32.3,29.7,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00609,15,3,0,0,PHC,North-West,34,118,89,10.1,24.8,29.7,negative,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00610,34,0,0,0,PHC,South-West,32,90,87,11.7,25.7,29.8,negative,0,0,1,0,0,0,0,1,Low,Routine ANC - No Significant Risk,Z34
+ABY-00611,29,6,0,0,Secondary,North-Central,31,127,72,13.7,26.3,35.9,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00612,25,1,0,0,PHC,North-East,37,129,60,8.6,26.3,40.0,1+,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00613,27,1,0,0,PHC,North-East,13,109,70,12.3,19.6,12.6,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00614,19,0,0,0,PHC,South-East,24,150,88,10.1,18.3,20.5,2+,0,0,0,0,0,0,1,0,High,Pre-eclampsia,JA24.2
+ABY-00615,40,1,0,0,Secondary,South-West,32,99,65,12.2,32.0,34.7,1+,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00616,26,4,0,1,Secondary,South-East,23,92,71,9.3,29.4,21.1,negative,0,0,0,0,0,1,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00617,26,8,0,0,PHC,North-East,17,112,91,10.4,29.7,19.6,2+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00618,30,1,1,0,Secondary,South-West,37,163,101,14.6,21.0,38.9,2+,0,1,0,1,1,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00619,28,1,0,0,Secondary,South-West,20,94,68,9.3,23.6,19.2,negative,0,0,0,0,0,0,1,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00620,27,3,0,0,Secondary,North-West,26,135,95,11.0,26.2,26.5,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00621,21,5,0,0,PHC,South-South,18,138,85,11.5,25.9,19.2,1+,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00622,28,2,0,0,Tertiary,South-West,27,106,87,9.4,35.7,30.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00623,37,1,0,0,Tertiary,South-West,38,194,87,8.5,22.8,36.1,negative,0,0,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00624,34,1,0,0,Secondary,South-West,40,83,73,9.1,21.5,40.0,2+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00625,35,3,0,0,Secondary,North-East,32,148,96,9.5,24.4,33.4,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00626,22,0,0,0,Secondary,South-West,33,101,82,10.9,16.0,33.6,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00627,20,2,0,0,PHC,North-West,13,135,77,12.6,21.4,10.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00628,25,1,0,0,PHC,South-West,33,99,81,10.9,27.2,38.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00629,26,4,0,1,Secondary,South-East,27,98,73,7.6,24.4,27.4,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00630,32,0,1,0,PHC,North-East,25,100,62,8.7,26.9,23.1,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00631,15,2,0,0,Tertiary,North-West,10,97,76,13.4,25.5,11.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00632,35,2,0,0,PHC,North-West,31,117,80,11.0,27.7,31.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00633,25,2,0,1,Secondary,South-West,34,113,69,8.3,18.4,30.6,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00634,23,0,0,0,PHC,North-West,27,90,61,12.0,19.5,25.6,negative,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00635,19,2,0,1,Secondary,North-Central,17,98,66,12.0,21.5,19.0,negative,0,0,0,0,0,1,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00636,16,2,0,0,PHC,North-Central,19,101,83,11.4,28.4,19.4,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00637,30,2,0,1,Secondary,North-East,16,117,79,10.9,26.8,15.2,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00638,26,2,1,0,PHC,South-West,40,132,64,9.4,19.0,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00639,18,3,0,0,PHC,South-West,30,181,101,6.8,26.5,27.7,1+,0,0,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00640,18,4,0,0,Secondary,North-East,8,91,89,11.5,20.8,10.7,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00641,23,1,0,0,PHC,North-Central,24,113,79,9.6,26.2,24.0,2+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00642,36,4,1,0,PHC,North-Central,40,106,85,8.6,27.5,40.0,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00643,24,2,1,0,PHC,North-Central,40,116,62,10.2,27.8,39.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00644,16,0,0,0,PHC,North-Central,25,108,75,10.8,24.9,21.9,trace,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00645,24,0,0,0,Secondary,South-South,15,115,86,5.5,27.3,14.9,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00646,24,1,0,0,PHC,South-East,15,111,73,10.5,21.5,14.3,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00647,15,3,0,0,Secondary,South-West,18,117,72,8.4,24.1,17.4,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00648,25,3,0,0,Secondary,North-Central,40,110,78,10.0,17.5,38.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00649,24,3,0,0,PHC,South-South,28,167,124,11.5,19.6,27.3,1+,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00650,30,2,0,0,PHC,South-West,30,114,59,10.3,23.2,32.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00651,37,1,1,0,PHC,South-South,22,115,83,12.8,21.3,26.4,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00652,32,0,0,0,Secondary,North-East,15,111,87,11.1,30.2,15.8,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00653,24,1,1,0,PHC,North-Central,40,84,83,9.2,23.5,40.0,1+,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00654,19,1,0,0,PHC,South-West,20,151,86,8.5,28.4,19.8,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00655,41,0,0,0,PHC,South-East,37,116,54,11.5,21.1,37.8,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00656,26,0,0,0,PHC,South-East,19,136,86,10.3,22.9,21.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00657,26,2,0,0,PHC,South-West,10,107,61,5.5,22.4,10.0,trace,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00658,25,3,1,1,PHC,South-South,29,127,69,9.8,29.1,27.6,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00659,27,8,0,1,Secondary,North-West,20,117,76,10.2,25.6,17.0,3+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00660,25,5,0,1,PHC,North-Central,34,114,81,9.3,36.5,32.6,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00661,22,2,0,0,Secondary,North-East,22,121,62,13.3,22.4,20.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00662,22,1,1,1,Secondary,North-East,24,110,83,6.6,21.7,17.8,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00663,25,2,0,0,Secondary,North-West,23,104,82,12.0,32.1,21.6,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00664,22,3,1,0,Secondary,South-East,39,104,89,13.0,27.2,38.1,negative,0,0,0,0,1,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00665,21,0,1,0,PHC,South-East,40,116,50,10.8,27.9,37.6,negative,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00666,26,1,0,0,Secondary,North-West,12,109,71,11.1,26.7,12.3,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00667,24,4,0,0,PHC,South-West,17,181,80,9.8,19.2,12.9,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00668,35,1,0,0,Tertiary,South-East,29,132,67,9.8,20.1,27.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00669,15,2,0,0,Tertiary,North-Central,39,87,75,10.9,29.1,38.4,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00670,32,2,0,0,PHC,North-West,20,108,67,11.8,19.3,21.5,3+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00671,33,0,0,0,Secondary,South-South,13,110,69,14.8,21.1,13.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00672,15,1,1,0,PHC,South-South,36,115,76,13.8,25.3,32.5,trace,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00673,23,1,0,0,PHC,South-West,28,93,59,12.9,27.4,29.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00674,23,0,0,0,Secondary,South-South,29,126,69,7.7,24.2,33.6,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00675,17,0,0,0,PHC,South-East,12,80,78,8.7,30.2,16.0,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00676,21,4,0,0,PHC,North-East,14,96,68,11.2,29.8,14.3,trace,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00677,19,1,0,0,Secondary,North-Central,20,121,79,8.8,26.5,19.7,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00678,36,2,1,0,PHC,South-West,36,112,67,8.9,26.7,38.5,negative,0,0,1,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00679,31,1,0,0,Secondary,South-West,24,145,104,8.4,22.0,24.2,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00680,33,6,0,0,Secondary,North-West,12,132,80,10.4,26.6,14.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00681,30,1,0,0,PHC,South-West,29,136,114,10.8,20.5,28.2,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00682,19,1,0,0,PHC,South-South,19,140,88,10.2,24.2,18.4,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00683,22,4,0,1,PHC,North-Central,19,162,88,10.7,32.1,14.2,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00684,28,4,0,0,Secondary,North-Central,33,134,97,4.9,27.1,30.6,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00685,18,0,0,0,PHC,South-South,15,103,88,10.8,18.8,20.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00686,30,4,0,0,PHC,North-West,19,132,89,7.2,21.5,16.0,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00687,24,1,0,0,PHC,North-Central,23,115,89,9.4,28.9,25.7,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00688,23,2,0,0,Secondary,North-Central,37,125,82,10.2,26.2,31.9,1+,0,0,0,0,1,0,0,1,High,Fetal Growth Restriction,JA65
+ABY-00689,30,0,1,1,PHC,North-East,25,110,84,9.4,23.5,26.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00690,28,0,0,0,PHC,North-West,32,97,78,12.9,35.2,32.3,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00691,23,3,0,1,Secondary,South-West,29,128,74,8.8,23.9,24.2,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00692,32,2,0,1,PHC,North-West,18,125,69,11.6,34.5,26.6,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00693,19,1,0,0,PHC,South-East,25,106,70,9.8,25.3,24.3,negative,0,1,0,1,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00694,29,3,0,0,Tertiary,North-West,21,132,61,12.0,21.3,21.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00695,29,3,0,0,PHC,South-East,26,155,87,9.7,28.2,25.8,3+,0,0,0,1,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00696,24,0,0,0,Secondary,North-West,35,127,101,9.7,33.1,35.2,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00697,27,2,0,0,PHC,South-East,23,116,69,11.0,16.4,19.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00698,18,0,0,0,PHC,South-West,24,109,77,11.8,18.5,25.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00699,31,3,0,0,PHC,South-West,16,144,93,9.8,32.6,15.0,trace,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00700,24,3,1,0,PHC,South-South,19,178,108,11.8,21.5,16.5,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00701,22,6,0,1,Secondary,North-West,15,120,58,10.6,24.1,13.2,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00702,32,0,0,0,Secondary,North-Central,38,126,73,10.5,17.6,38.2,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00703,21,0,0,0,PHC,North-West,23,111,64,6.1,29.8,20.2,negative,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00704,17,1,0,0,Secondary,North-Central,19,128,65,10.5,18.8,18.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00705,16,1,1,0,PHC,North-West,37,142,81,15.0,23.6,37.7,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00706,29,0,0,0,Secondary,North-Central,21,120,72,10.2,24.6,14.8,negative,0,1,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00707,18,5,0,0,PHC,South-East,32,133,100,9.9,24.3,27.5,negative,0,1,0,1,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00708,36,0,0,0,PHC,South-East,30,133,85,15.0,25.6,27.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00709,15,1,0,0,PHC,South-West,32,140,98,10.9,26.7,29.4,negative,0,0,0,0,1,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00710,36,3,0,0,Secondary,North-East,23,125,88,6.5,24.8,22.3,2+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00711,27,1,0,1,PHC,North-West,26,127,78,13.5,23.2,22.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00712,25,3,0,0,Secondary,South-West,29,122,69,11.5,17.8,32.7,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00713,22,0,0,0,Secondary,North-East,13,178,101,11.5,22.7,14.8,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00714,28,2,0,1,Tertiary,North-East,26,96,61,13.0,24.0,26.5,negative,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00715,25,0,0,0,PHC,North-West,29,121,73,15.0,34.1,30.2,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00716,32,0,0,0,Secondary,North-Central,27,142,85,8.7,30.4,29.0,negative,0,0,1,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00717,26,5,0,0,Tertiary,North-West,8,128,64,11.1,32.6,11.9,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00718,26,0,0,0,PHC,North-Central,16,116,70,12.0,34.5,16.8,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00719,23,2,0,1,PHC,South-South,23,125,74,10.5,22.2,18.5,trace,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00720,25,1,0,0,PHC,South-East,25,114,84,9.7,26.3,25.2,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00721,27,1,0,0,PHC,South-East,22,110,60,11.6,24.9,19.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00722,15,5,0,1,Secondary,North-West,40,104,67,8.2,26.6,40.0,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00723,17,0,0,0,PHC,North-East,16,166,70,13.5,22.4,15.9,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00724,30,3,0,0,Tertiary,North-Central,15,126,61,10.1,23.7,15.6,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00725,27,6,0,1,PHC,North-East,8,117,92,6.7,24.5,10.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00726,24,2,0,1,Secondary,North-East,31,123,63,8.7,22.9,30.8,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00727,26,5,0,0,Secondary,North-East,30,99,79,12.7,32.8,29.1,trace,0,0,0,1,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00728,28,0,0,1,PHC,North-West,35,114,78,10.8,30.7,31.6,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00729,22,1,0,0,PHC,North-West,39,123,57,9.4,24.3,40.0,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00730,21,1,0,0,Secondary,South-South,8,112,77,13.9,25.6,10.0,trace,0,0,1,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00731,27,3,0,1,PHC,South-West,33,182,98,10.8,32.6,32.1,trace,0,0,0,1,1,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00732,20,7,0,0,PHC,South-South,21,110,88,8.2,24.9,25.1,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00733,28,1,0,0,PHC,North-Central,21,131,76,10.2,31.3,23.7,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00734,15,3,0,0,PHC,South-South,19,161,77,11.4,26.1,14.5,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00735,32,0,0,0,Secondary,North-East,40,133,87,11.7,23.3,39.7,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00736,28,2,0,1,Secondary,South-East,19,121,85,9.9,26.0,16.0,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00737,27,1,0,1,Tertiary,South-West,30,142,113,9.4,17.3,33.2,1+,0,0,1,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00738,31,7,0,0,PHC,North-West,34,127,59,10.4,22.1,33.0,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00739,35,2,0,0,Secondary,North-Central,26,120,69,14.0,23.8,28.5,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00740,32,1,0,1,PHC,North-East,33,131,73,12.0,26.9,38.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00741,15,0,0,0,Secondary,North-East,8,99,67,6.6,16.8,10.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00742,18,0,0,0,Secondary,North-East,26,120,76,11.8,19.8,28.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00743,22,0,0,0,PHC,North-West,35,102,67,8.1,25.5,33.6,negative,0,1,0,0,0,0,0,1,High,Moderate-Severe Anaemia,JA42
+ABY-00744,26,1,1,0,PHC,South-East,20,137,91,10.5,25.3,21.0,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00745,29,4,0,0,PHC,North-West,24,147,110,12.8,24.6,21.0,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00746,21,2,0,0,PHC,South-South,38,143,74,11.6,21.5,39.5,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00747,27,2,0,1,PHC,South-East,31,93,86,12.3,21.0,27.2,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00748,21,0,0,0,Tertiary,North-West,20,110,83,9.3,25.6,18.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00749,22,4,0,0,Secondary,North-West,20,96,75,9.5,19.5,19.8,2+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00750,17,3,0,0,PHC,South-South,35,160,71,9.2,22.3,36.6,negative,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00751,20,0,0,0,PHC,South-West,19,119,76,11.3,30.0,20.5,negative,0,0,0,0,1,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00752,17,3,0,0,PHC,North-West,20,158,101,8.4,20.3,17.3,3+,0,0,0,0,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00753,20,2,0,0,PHC,North-Central,37,120,81,9.6,17.3,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00754,32,0,0,0,PHC,North-East,8,162,80,6.3,25.8,10.0,1+,0,0,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00755,20,1,1,0,PHC,South-East,20,154,94,15.0,16.7,19.1,negative,0,0,1,0,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00756,41,2,0,0,PHC,North-West,28,119,96,10.7,16.0,30.0,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00757,28,0,0,1,Secondary,South-South,10,104,73,10.8,35.2,10.2,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00758,27,6,0,0,PHC,South-West,23,118,78,11.1,23.2,23.6,negative,0,0,1,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00759,20,4,0,0,Secondary,South-West,22,115,80,14.0,21.7,26.9,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00760,30,3,0,1,PHC,South-East,35,99,79,7.0,25.0,36.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00761,22,1,0,0,PHC,North-Central,16,148,73,9.8,26.1,19.6,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00762,26,1,0,1,PHC,North-Central,23,132,70,9.8,27.5,22.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00763,41,3,1,0,PHC,North-Central,40,122,74,11.1,19.5,40.0,3+,0,0,0,1,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00764,25,2,0,0,Secondary,North-East,22,125,77,12.4,16.3,24.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00765,32,0,0,0,Secondary,South-East,40,109,70,9.4,22.9,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00766,21,2,0,0,PHC,South-South,20,130,61,12.6,16.0,24.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00767,25,4,0,0,Secondary,South-East,37,82,90,12.6,19.1,39.2,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00768,36,1,0,0,PHC,North-West,18,134,118,11.5,21.5,21.9,negative,0,0,0,0,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00769,22,0,0,0,PHC,South-South,27,179,117,8.9,23.9,27.3,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00770,36,3,1,0,Tertiary,North-East,25,133,75,11.0,23.0,24.7,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00771,30,0,0,0,PHC,North-East,26,111,76,12.9,24.8,24.2,1+,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00772,22,1,0,0,Secondary,South-West,33,127,74,11.0,23.0,35.8,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00773,29,0,0,0,PHC,South-South,40,112,58,8.4,17.8,40.0,trace,0,1,0,0,0,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00774,31,1,0,0,PHC,North-East,26,139,59,11.6,30.1,28.3,negative,0,0,0,1,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00775,29,3,0,0,PHC,North-West,23,159,112,7.8,29.7,19.8,trace,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00776,16,2,0,0,Secondary,North-West,35,100,66,15.0,20.0,33.3,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00777,21,0,0,0,PHC,North-Central,21,136,60,6.9,23.0,16.4,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00778,24,4,1,0,Secondary,North-West,19,108,86,10.4,23.9,16.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00779,25,4,1,0,PHC,South-South,36,129,77,9.7,33.8,34.8,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00780,29,4,1,0,PHC,North-West,17,129,83,8.7,23.7,17.3,1+,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00781,27,0,0,0,Tertiary,South-East,17,96,64,11.8,22.1,15.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00782,17,1,0,0,Secondary,South-East,25,109,58,8.7,26.7,24.7,negative,0,1,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00783,28,7,0,1,PHC,North-West,23,112,70,10.1,24.6,21.7,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00784,29,3,0,0,PHC,South-West,33,136,98,12.2,23.1,38.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00785,29,0,0,0,PHC,North-Central,20,142,80,7.9,17.4,19.4,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00786,32,0,0,0,PHC,North-West,23,112,78,11.3,19.1,21.9,negative,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00787,31,1,0,0,PHC,South-West,23,171,85,13.5,34.6,22.6,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00788,28,5,0,0,PHC,North-West,18,149,81,8.4,26.1,16.8,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00789,25,2,0,0,PHC,North-Central,19,147,110,11.1,17.5,24.7,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00790,16,2,0,0,PHC,South-South,26,87,74,6.7,34.7,23.3,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00791,28,0,0,0,Secondary,North-East,27,114,75,11.4,28.3,26.1,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00792,27,3,0,0,Secondary,North-Central,20,164,92,10.4,27.7,23.6,1+,0,0,0,1,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00793,27,4,0,0,Tertiary,South-West,10,99,84,14.0,27.2,13.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00794,18,1,0,0,PHC,North-Central,28,96,72,12.7,19.4,25.2,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00795,19,3,0,0,Secondary,South-South,19,133,71,10.7,28.0,17.6,negative,0,0,0,1,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00796,32,6,0,0,Secondary,North-Central,16,133,89,10.6,16.0,18.4,2+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00797,25,0,0,0,Secondary,South-West,24,85,69,12.0,21.2,24.3,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00798,30,2,0,0,PHC,South-South,19,111,88,11.7,23.2,18.2,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00799,26,1,0,0,PHC,South-West,29,169,75,6.8,19.6,27.2,negative,0,0,0,1,0,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00800,26,4,0,1,PHC,South-East,34,118,75,11.5,22.3,31.8,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00801,31,2,1,0,PHC,South-East,19,121,78,4.9,27.2,12.8,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00802,22,2,0,0,Secondary,North-Central,15,101,79,12.5,25.9,17.7,negative,0,0,1,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00803,26,4,0,0,PHC,South-East,18,130,61,9.9,27.3,13.8,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00804,23,1,0,0,Secondary,South-South,32,115,71,11.2,30.5,32.8,negative,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00805,23,5,0,0,Secondary,South-South,21,119,72,10.0,26.4,22.4,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00806,24,2,0,0,Secondary,North-East,36,129,69,10.0,24.0,37.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00807,27,0,0,0,PHC,North-West,33,114,106,6.5,28.2,34.7,trace,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00808,23,3,0,1,Secondary,North-West,25,125,81,11.8,27.3,25.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00809,33,4,1,0,Secondary,North-Central,28,123,87,6.8,27.0,31.5,negative,0,0,0,0,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00810,20,1,0,0,Secondary,North-Central,20,110,79,11.8,27.2,19.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00811,24,4,0,0,Secondary,South-West,36,101,73,12.2,21.7,39.1,negative,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00812,23,5,0,0,PHC,North-West,20,115,69,12.5,36.1,22.1,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00813,34,1,0,1,Secondary,North-East,31,106,74,11.6,25.7,32.2,3+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00814,27,7,0,1,PHC,South-South,20,117,73,10.7,27.7,16.5,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00815,32,0,0,0,PHC,South-West,19,123,77,11.6,20.3,18.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00816,17,0,0,0,PHC,South-West,35,106,71,5.7,24.9,33.5,negative,0,0,0,0,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00817,27,0,0,1,PHC,South-West,17,136,71,10.2,29.2,15.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00818,31,5,0,0,Secondary,North-Central,8,114,81,6.5,23.6,11.4,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00819,26,3,0,0,PHC,North-West,16,150,114,10.3,24.0,17.6,2+,0,0,0,1,0,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00820,32,0,0,0,PHC,North-Central,30,128,70,8.4,35.7,29.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00821,22,1,0,0,PHC,North-East,26,122,71,4.9,26.8,23.3,negative,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00822,34,2,0,0,PHC,North-West,22,103,62,9.1,24.9,23.4,2+,0,0,0,0,0,0,1,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00823,39,0,0,0,PHC,North-West,16,80,72,12.5,23.4,20.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00824,23,5,0,0,PHC,North-Central,37,100,57,7.5,28.0,37.9,negative,0,0,0,1,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00825,23,4,0,1,PHC,North-Central,8,115,69,8.5,28.3,10.0,negative,0,0,0,1,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00826,34,2,0,1,PHC,South-South,34,124,76,7.5,24.0,33.4,negative,0,0,0,1,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00827,35,6,0,0,PHC,South-West,38,122,63,6.8,20.9,34.8,negative,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00828,22,1,0,0,Secondary,South-South,31,140,101,13.6,18.4,33.9,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00829,23,7,1,1,Secondary,South-East,20,110,56,4.8,20.5,19.6,2+,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00830,24,3,0,1,Secondary,South-West,40,96,79,14.6,24.8,35.6,trace,0,0,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00831,17,2,0,0,Tertiary,North-West,23,134,68,8.4,25.4,19.7,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00832,20,0,0,0,PHC,North-West,18,147,98,10.0,30.7,14.2,1+,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00833,19,5,0,0,Secondary,South-East,25,118,87,9.0,19.1,24.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00834,21,1,0,0,Secondary,North-Central,14,126,71,11.8,27.6,10.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00835,25,0,0,1,PHC,South-West,19,110,59,10.5,23.4,17.8,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00836,27,0,0,0,PHC,South-West,33,187,90,15.0,27.6,38.8,negative,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00837,35,2,0,1,Secondary,North-East,25,153,94,5.9,24.8,26.1,2+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00838,20,2,0,0,PHC,North-West,21,112,70,13.1,26.4,23.5,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00839,31,3,0,0,PHC,North-West,20,122,85,12.4,19.1,16.6,trace,0,1,0,0,0,0,1,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00840,24,5,0,1,Secondary,North-East,19,125,78,11.7,28.4,23.2,1+,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00841,25,0,1,0,PHC,North-West,33,106,58,11.0,28.5,29.7,negative,0,0,0,0,1,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00842,30,3,0,1,PHC,South-West,38,128,74,8.6,20.9,40.0,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00843,19,0,0,0,Tertiary,North-West,30,125,83,15.0,26.5,30.7,3+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00844,28,4,0,0,Secondary,South-East,34,130,80,9.2,24.0,33.9,trace,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00845,26,4,0,0,PHC,North-West,23,145,81,9.0,28.5,22.3,negative,0,1,0,1,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00846,28,2,0,0,PHC,North-Central,31,131,75,9.2,27.2,32.9,negative,1,0,0,0,0,0,1,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00847,27,3,0,1,Secondary,North-West,20,98,73,10.9,16.0,17.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00848,40,1,0,0,Secondary,South-West,26,129,73,6.3,32.2,30.5,negative,1,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00849,22,2,0,0,Tertiary,North-West,31,106,72,8.0,28.6,30.3,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00850,22,4,0,0,PHC,North-East,24,104,73,7.5,19.3,25.1,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00851,22,1,0,0,PHC,North-West,13,117,74,11.9,31.2,12.8,negative,0,0,0,0,0,0,0,0,Moderate,Obesity in Pregnancy,JA00
+ABY-00852,22,1,0,0,Secondary,South-South,25,126,70,9.6,27.0,27.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00853,22,2,0,0,PHC,South-South,27,113,66,10.6,27.8,30.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00854,33,4,0,1,Secondary,North-East,35,118,81,8.4,29.0,36.6,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00855,34,1,0,0,PHC,South-East,20,126,62,9.9,23.0,18.4,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00856,22,0,0,0,PHC,North-West,18,116,65,9.2,25.6,22.2,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00857,21,3,0,1,Secondary,North-Central,21,102,85,6.2,24.0,24.7,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00858,28,4,0,0,PHC,South-South,26,120,79,9.5,23.0,28.1,2+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00859,22,0,0,0,Secondary,South-West,31,117,70,9.8,25.6,29.8,1+,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00860,29,0,0,0,PHC,South-South,12,142,79,11.6,19.1,16.0,2+,0,0,0,0,0,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00861,27,0,0,0,PHC,North-West,25,119,75,6.8,28.8,22.2,negative,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00862,16,1,0,0,PHC,North-West,35,89,69,7.6,28.7,33.5,negative,0,0,0,0,1,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00863,35,1,0,0,PHC,South-South,29,124,58,10.9,27.4,30.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00864,36,3,1,0,PHC,North-West,26,113,91,10.4,26.9,27.5,negative,0,0,0,0,0,0,1,0,Critical,Antepartum Haemorrhage / Placenta Risk,JA60
+ABY-00865,22,3,0,0,PHC,South-West,38,99,63,10.2,33.3,37.3,negative,0,0,0,0,1,0,1,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00866,23,2,0,1,PHC,South-West,18,105,95,10.7,23.7,21.2,1+,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00867,27,1,0,0,Tertiary,North-East,30,127,74,6.8,17.8,32.0,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00868,28,4,0,0,PHC,South-South,25,92,73,10.7,21.7,26.1,negative,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00869,29,2,0,0,PHC,North-West,10,126,104,10.8,17.0,13.8,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00870,38,7,0,1,Secondary,North-West,31,139,81,9.7,25.8,29.3,negative,1,0,0,0,1,0,0,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00871,24,2,0,1,PHC,North-West,19,147,77,9.3,25.1,18.5,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00872,21,0,0,0,PHC,South-West,18,99,76,6.1,25.6,20.2,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00873,17,3,0,0,Secondary,South-West,32,141,69,12.3,22.6,32.9,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00874,21,1,0,0,PHC,North-East,40,107,77,10.9,31.8,37.9,2+,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00875,25,3,0,1,PHC,North-West,25,123,57,9.9,22.8,22.6,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00876,36,0,0,0,PHC,North-Central,40,130,79,9.6,23.8,40.0,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00877,22,0,0,0,PHC,North-West,24,126,56,12.0,17.1,28.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00878,27,4,0,0,PHC,South-East,40,136,81,9.0,21.0,32.5,negative,0,0,0,0,1,0,0,1,High,Fetal Growth Restriction,JA65
+ABY-00879,25,0,0,0,Secondary,North-West,20,156,88,6.8,26.8,22.0,1+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00880,33,4,1,0,PHC,North-West,33,186,102,13.6,19.0,33.7,1+,0,0,0,1,1,0,0,0,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00881,41,1,0,1,PHC,North-East,25,136,84,7.5,26.4,19.9,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00882,22,2,0,0,Secondary,North-West,15,151,101,5.2,29.7,10.2,trace,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00883,23,3,0,1,PHC,South-West,34,141,68,6.9,23.7,34.3,negative,0,1,0,1,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00884,32,2,0,0,PHC,North-West,15,146,104,6.3,31.7,12.7,trace,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00885,30,1,0,0,PHC,North-West,40,169,85,10.5,28.7,38.9,2+,0,1,0,1,0,1,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00886,37,0,0,0,Secondary,North-East,26,115,54,12.1,27.8,28.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00887,29,0,0,0,Secondary,North-Central,22,129,73,13.2,23.6,23.4,3+,0,0,0,0,1,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00888,23,1,0,0,Tertiary,South-South,34,121,75,8.4,24.8,36.2,3+,0,0,0,0,0,0,1,0,High,Moderate-Severe Anaemia,JA42
+ABY-00889,29,3,0,0,PHC,South-East,24,120,62,13.3,21.7,23.6,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00890,32,5,0,0,PHC,North-East,17,110,94,10.2,24.2,17.5,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00891,30,4,0,1,PHC,North-West,39,102,78,6.5,17.2,38.2,negative,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00892,29,3,0,0,Tertiary,North-West,18,124,80,8.8,25.9,17.8,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00893,32,3,0,0,PHC,North-West,40,138,70,14.0,25.5,36.1,1+,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00894,33,3,0,0,PHC,North-Central,21,118,83,14.1,24.9,21.9,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00895,34,1,0,0,Secondary,North-West,12,101,60,11.7,22.7,14.3,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00896,29,5,0,0,Secondary,South-East,27,150,90,10.7,33.6,24.2,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00897,24,3,0,0,PHC,North-East,22,123,92,8.6,34.0,19.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00898,26,2,0,0,PHC,North-Central,27,110,66,10.3,23.2,26.7,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00899,33,0,0,0,Tertiary,North-Central,19,152,81,8.3,28.1,18.8,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00900,21,1,0,0,PHC,South-South,34,106,81,12.6,29.9,33.7,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00901,28,1,0,0,Secondary,South-West,29,87,76,10.4,17.9,33.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00902,23,4,0,0,Secondary,North-West,17,108,57,8.7,29.6,17.8,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00903,26,2,0,0,PHC,North-West,38,159,92,8.4,22.3,39.6,2+,0,1,0,1,1,0,0,0,High,Pre-eclampsia,JA24.2
+ABY-00904,33,1,0,0,PHC,South-West,32,128,82,5.0,21.2,32.0,negative,0,0,0,1,1,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00905,27,7,0,0,PHC,South-West,24,124,78,10.5,24.0,25.9,negative,1,0,0,0,0,0,0,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00906,26,0,0,0,PHC,North-Central,13,147,89,10.6,22.7,10.0,trace,1,0,0,1,0,0,0,0,High,HIV in Pregnancy - PMTCT Required,1C62.Z
+ABY-00907,17,1,0,0,PHC,South-South,33,116,72,7.2,26.0,32.2,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00908,30,0,0,0,Secondary,North-East,35,139,71,9.3,23.6,37.0,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00909,29,3,0,0,PHC,North-Central,22,120,73,10.7,16.0,21.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00910,38,5,0,1,PHC,North-East,21,105,84,9.0,22.2,20.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00911,24,1,0,0,PHC,South-West,40,101,58,8.4,28.4,40.0,trace,0,0,0,0,1,1,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00912,27,4,0,0,Secondary,South-East,17,123,78,8.5,28.2,17.5,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00913,27,1,0,1,PHC,South-East,37,125,83,10.9,25.2,38.0,negative,0,0,0,0,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00914,35,5,0,0,Secondary,North-East,35,105,71,8.4,23.5,30.3,negative,0,0,1,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00915,25,3,0,0,Secondary,South-South,10,138,68,11.9,26.4,10.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00916,27,4,1,0,Secondary,South-South,39,134,72,10.8,25.8,39.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00917,29,0,0,0,PHC,South-West,14,123,89,10.8,24.1,13.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00918,27,6,0,0,PHC,North-East,14,139,64,10.4,18.3,14.9,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00919,23,3,0,0,Secondary,North-West,38,105,84,9.7,34.3,37.4,trace,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00920,27,1,0,0,Tertiary,North-West,20,114,82,11.6,25.1,18.9,negative,0,1,1,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00921,32,4,1,0,Secondary,North-Central,22,99,104,12.3,23.4,19.5,1+,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00922,19,1,0,0,PHC,South-West,29,100,76,10.0,24.1,25.3,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00923,26,4,0,0,PHC,South-South,19,114,82,10.5,25.5,21.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00924,21,0,0,0,Secondary,South-West,16,114,66,8.0,25.3,13.2,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00925,33,3,0,0,Tertiary,South-South,29,91,61,10.1,28.8,26.7,negative,0,1,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00926,16,2,0,0,PHC,North-East,33,93,61,10.8,26.8,33.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00927,22,0,0,0,PHC,North-East,30,104,75,8.8,28.4,26.6,negative,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00928,28,0,0,0,PHC,North-East,33,96,81,10.3,29.2,33.9,negative,0,0,0,1,1,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00929,35,0,0,0,Secondary,South-West,40,108,85,5.4,28.0,37.0,negative,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00930,25,1,1,0,PHC,North-West,20,118,81,12.2,24.7,18.2,negative,0,0,0,0,0,0,1,0,Moderate,Previous Caesarean Section,JA00
+ABY-00931,22,1,0,0,Tertiary,South-East,8,100,60,10.3,25.8,10.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00932,37,2,0,1,PHC,North-East,24,117,63,8.0,31.0,23.8,1+,0,0,0,1,0,0,1,0,High,Moderate-Severe Anaemia,JA42
+ABY-00933,17,1,0,0,PHC,North-West,40,113,70,9.9,17.5,40.0,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00934,15,1,0,1,PHC,North-East,34,133,60,10.3,28.7,35.1,1+,0,0,0,0,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00935,28,3,1,0,PHC,North-West,16,123,73,6.4,26.9,17.2,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00936,22,0,0,0,PHC,North-West,18,115,71,10.9,22.1,16.6,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00937,19,5,0,0,PHC,South-West,37,83,79,10.2,32.8,40.0,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00938,30,4,0,0,PHC,South-East,38,116,60,11.3,16.5,37.5,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00939,27,3,0,0,PHC,South-South,40,97,65,10.8,19.5,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00940,22,2,0,0,PHC,North-West,11,100,96,12.3,27.5,10.3,trace,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00941,18,5,0,0,PHC,South-South,35,95,73,12.9,24.4,33.3,negative,0,0,0,0,0,0,0,0,Moderate,Grand Multiparity,JA00
+ABY-00942,31,0,0,0,Secondary,South-West,24,115,74,8.9,27.2,28.4,trace,0,0,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00943,29,0,1,0,PHC,South-South,27,124,90,9.9,16.0,28.1,trace,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00944,25,0,0,0,PHC,North-East,18,170,86,10.4,17.1,19.2,negative,0,0,0,0,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00945,37,4,0,0,PHC,North-East,24,131,87,9.5,25.6,20.5,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00946,19,0,0,0,PHC,North-West,33,102,69,9.2,26.6,32.5,negative,0,0,0,1,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00947,16,2,0,0,PHC,North-West,22,146,69,9.8,18.8,22.6,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00948,21,8,0,0,PHC,North-Central,24,138,70,9.3,28.7,18.3,negative,1,0,0,0,1,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00949,25,4,0,0,Secondary,North-East,9,120,81,12.4,19.8,12.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00950,27,2,1,0,PHC,North-East,25,117,79,9.0,22.1,26.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00951,24,0,0,0,Tertiary,North-East,40,99,77,8.9,24.9,37.9,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00952,28,4,0,0,Secondary,North-Central,15,112,75,13.5,21.6,12.2,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00953,18,2,0,0,PHC,North-West,33,113,76,9.2,21.5,28.5,negative,0,1,0,0,0,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00954,34,0,0,0,Tertiary,North-East,22,132,77,10.1,26.2,23.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00955,25,0,0,0,Tertiary,South-West,40,137,78,8.1,25.1,40.0,negative,0,0,0,0,1,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00956,32,5,0,0,Secondary,North-East,28,102,60,10.0,25.5,29.8,negative,0,0,0,0,0,0,0,1,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00957,28,3,1,0,Secondary,North-West,22,102,76,12.4,19.3,19.9,trace,0,1,1,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00958,28,4,0,0,PHC,South-West,21,120,68,12.1,28.1,19.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00959,29,4,1,0,PHC,South-East,32,122,76,10.4,24.3,30.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00960,28,2,0,0,Secondary,South-South,24,102,71,14.8,21.2,22.9,negative,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00961,29,2,0,0,PHC,South-West,31,102,61,10.3,27.7,38.2,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00962,33,1,1,0,PHC,North-East,25,116,82,12.0,27.2,23.5,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00963,27,1,0,0,PHC,South-South,14,128,67,10.9,27.9,12.6,trace,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00964,30,1,0,0,PHC,South-East,39,108,75,10.7,24.6,36.4,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00965,25,3,1,0,Tertiary,North-West,40,104,88,9.9,17.5,38.3,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00966,34,2,0,0,PHC,South-East,27,105,72,9.3,22.8,27.7,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00967,21,5,0,0,Secondary,North-West,32,95,77,10.4,17.5,32.8,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00968,36,1,0,0,Secondary,North-West,23,91,59,9.6,29.8,21.5,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00969,25,2,0,0,Secondary,North-Central,30,167,91,12.0,26.6,32.5,negative,0,0,0,1,0,0,0,1,Critical,Severe Hypertension in Pregnancy,JA24.3
+ABY-00970,17,2,0,0,Tertiary,North-Central,28,111,68,10.8,24.0,25.7,1+,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00971,26,2,1,0,Secondary,North-West,40,114,92,14.3,23.4,40.0,negative,0,0,0,1,0,1,0,0,High,Reduced Fetal Movement,JA65
+ABY-00972,21,3,0,0,PHC,North-East,31,162,79,8.8,18.9,33.8,3+,0,0,0,1,1,0,0,1,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00973,31,0,0,0,PHC,South-West,38,105,88,11.0,21.8,36.4,trace,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00974,22,2,0,0,PHC,North-Central,31,145,100,11.7,20.6,25.6,trace,0,0,0,0,1,0,0,0,High,Fetal Growth Restriction,JA65
+ABY-00975,23,0,0,0,PHC,South-South,28,114,92,13.7,21.2,28.4,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00976,15,1,1,0,PHC,South-West,35,130,60,11.7,22.0,34.5,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00977,23,2,0,0,PHC,North-West,30,99,70,13.2,25.8,28.5,2+,0,0,0,1,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00978,15,3,0,1,PHC,North-Central,15,121,75,12.8,25.9,11.5,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00979,16,6,0,0,Secondary,North-West,19,115,67,8.8,28.9,19.6,negative,0,1,0,0,0,0,0,0,High,Moderate-Severe Anaemia,JA42
+ABY-00980,30,2,0,0,Secondary,North-East,31,154,71,11.3,30.9,28.9,negative,0,0,0,1,1,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00981,30,3,0,0,PHC,North-East,18,127,71,13.1,17.9,17.2,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00982,28,2,0,0,Secondary,North-West,13,147,73,6.6,28.4,16.1,1+,0,0,0,1,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00983,20,2,0,1,PHC,South-East,24,136,92,12.0,30.0,25.9,negative,0,0,0,0,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00984,25,0,0,0,PHC,North-Central,36,117,71,6.9,26.2,35.5,3+,0,0,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00985,25,1,1,0,Secondary,North-West,40,94,86,13.2,22.8,40.0,negative,0,0,0,0,0,0,0,0,Moderate,Previous Caesarean Section,JA00
+ABY-00986,19,1,1,0,Tertiary,North-West,22,118,80,5.8,18.4,23.2,negative,0,1,0,0,0,0,0,0,Critical,Severe Anaemia in Pregnancy,JA43
+ABY-00987,35,2,0,0,PHC,South-East,21,134,76,14.1,19.6,24.1,negative,0,1,0,0,0,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00988,31,0,0,0,Tertiary,North-East,23,139,63,10.0,24.4,27.1,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00989,24,0,0,0,Tertiary,North-West,27,100,67,11.5,25.1,28.4,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00990,26,1,0,0,Secondary,South-South,23,118,87,11.1,16.0,22.4,1+,0,0,0,0,0,0,1,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00991,27,7,0,0,Secondary,South-South,31,160,103,8.5,32.5,30.2,2+,0,1,0,0,1,0,0,0,Critical,Severe Pre-eclampsia,JA24.3
+ABY-00992,15,1,0,0,PHC,North-West,17,96,83,11.3,17.7,16.8,negative,0,0,0,0,0,1,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00993,24,2,0,0,PHC,North-East,19,116,74,11.8,23.4,15.8,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00994,21,0,0,0,PHC,South-West,40,122,74,9.6,18.8,39.0,negative,0,0,0,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00995,19,2,0,0,PHC,South-South,22,103,68,10.3,26.1,22.8,negative,0,0,1,0,0,0,0,0,Moderate,Mild Anaemia in Pregnancy,JA42
+ABY-00996,24,1,0,0,PHC,South-West,38,116,75,11.2,27.7,36.7,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-00997,36,0,0,0,PHC,South-South,15,131,73,10.3,31.5,15.6,trace,0,1,0,0,1,0,0,0,High,Malaria in Pregnancy,1A44.Z
+ABY-00998,29,2,1,0,Secondary,North-Central,36,139,92,9.3,23.3,37.1,negative,0,0,0,1,0,0,0,0,Moderate,Gestational Hypertension,JA24.1
+ABY-00999,22,0,0,0,PHC,North-East,38,100,56,11.3,20.7,40.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34
+ABY-01000,29,0,0,0,Secondary,South-West,14,125,78,13.1,27.0,10.0,negative,0,0,0,0,0,0,0,0,Low,Routine ANC - No Significant Risk,Z34

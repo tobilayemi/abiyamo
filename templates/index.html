@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abiyamo — ANC Risk Assessment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   ABIYAMO — ANC Risk Stratification Tool
+   Palette: Warm Plum · Dusty Rose · Blush Ivory · Sage
+   Font: Poppins (display & body)
+   ================================================================ */
+
+:root {
+  /* ── Brand Palette ── */
+  --plum:       #3B1F4E;      /* header / dark elements      */
+  --plum-mid:   #4D2B63;      /* hover states                */
+  --rose:       #C4769A;      /* primary accent              */
+  --rose-dk:    #A85C80;      /* rose hover                  */
+  --rose-pale:  #FDF0F5;      /* rose-tinted backgrounds     */
+  --sage:       #5A9E7A;      /* secondary / low-risk accent */
+  --sage-pale:  #F0F8F4;      /* sage-tinted background      */
+  --ivory:      #FDF7F5;      /* page background             */
+  --white:      #FFFCFE;      /* panel background            */
+  --ink:        #3B1F4E;      /* headings                    */
+  --body:       #5A3F6B;      /* body text                   */
+  --muted:      #8B6FA0;      /* secondary text / captions   */
+  --rule:       rgba(196,118,154,0.14); /* rose-tinted border */
+  --rule-lt:    rgba(196,118,154,0.08); /* very light border  */
+
+  /* ── Risk Colours (clinically functional) ── */
+  --crit-bg:    #7F1D1D;
+  --high-bg:    #78350F;
+  --mod-bg:     #713F12;
+  --low-bg:     #14532D;
+
+  /* ── Shadows ── */
+  --shadow:     0 12px 36px rgba(59,31,78,0.10), 0 2px 8px rgba(59,31,78,0.06);
+  --shadow-sm:  0 2px 10px rgba(59,31,78,0.07);
+
+  /* ── Geometry ── */
+  --radius:     6px;
+  --radius-lg:  10px;
+  --max:        1300px;
+
+  /* ── Transitions ── */
+  --ease:       cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur:        0.18s;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  background: var(--ivory);
+  color: var(--body);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── HEADER ── */
+header {
+  background: var(--plum);
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9B7BB0;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+
+.nav-links a:hover { color: #E8C8D8; background: rgba(255,255,255,0.06); }
+.nav-links a.active { color: #fff; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--rose) 0%, var(--plum-mid) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-mark svg { color: #fff; }
+
+.brand-text { display: flex; flex-direction: column; gap: 1px; }
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F8F5FC;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 9.5px;
+  font-weight: 400;
+  color: #9B7BB0;
+  letter-spacing: 0.05em;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: #9B7BB0;
+  letter-spacing: 0.03em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6DBE8E;
+  box-shadow: 0 0 0 2px rgba(109,190,142,0.22);
+  flex-shrink: 0;
+}
+
+.ver-chip {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #C4A0D8;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 3px 9px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* ── WORKSPACE ── */
+.workspace {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ── PANELS ── */
+.panel {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.panel-head {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--rule-lt);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(to right, var(--rose-pale), var(--white));
+}
+
+.panel-head-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius);
+  background: var(--rose-pale);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.panel-head h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  flex: 1;
+}
+
+.panel-head-aside {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.panel-body { padding: 20px; }
+
+/* ── FORM SECTIONS ── */
+.fs { margin-bottom: 20px; }
+.fs:last-of-type { margin-bottom: 0; }
+
+/* Section label — DUAC h4 style */
+.fs-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fs-label::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rose), var(--plum-mid));
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.fs-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule-lt);
+}
+
+/* Form rows */
+.frow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+.frow.three { grid-template-columns: 1fr 1fr 1fr; }
+.frow.one   { grid-template-columns: 1fr; }
+.frow:last-child { margin-bottom: 0; }
+
+.fg { display: flex; flex-direction: column; gap: 4px; }
+
+label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--body);
+  letter-spacing: 0.02em;
+}
+
+label .unit {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+input:focus, select:focus {
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(196,118,154,0.12);
+}
+
+select { cursor: pointer; }
+
+/* ── TOGGLES ── */
+.toggle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.tg {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--body);
+  letter-spacing: 0.01em;
+  transition: border-color var(--dur), background var(--dur), color var(--dur);
+  user-select: none;
+  line-height: 1.3;
+}
+
+.tg:hover {
+  border-color: var(--rose);
+  background: var(--rose-pale);
+  color: var(--rose-dk);
+}
+
+.tg input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  accent-color: var(--rose);
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* ── BUTTONS ── */
+.btn-run {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dk) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity var(--dur), transform var(--dur);
+  box-shadow: 0 4px 14px rgba(196,118,154,0.35);
+}
+
+.btn-run:hover  { opacity: 0.92; }
+.btn-run:active { transform: scale(0.99); }
+
+.btn-clear {
+  width: 100%;
+  margin-top: 8px;
+  padding: 9px 16px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all var(--dur);
+}
+
+.btn-clear:hover {
+  border-color: var(--rose);
+  color: var(--rose-dk);
+  background: var(--rose-pale);
+}
+
+/* ── RESULT — EMPTY STATE ── */
+.result-empty {
+  background: var(--white);
+  border: 1px solid var(--rule-lt);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  color: rgba(196,118,154,0.25);
+}
+
+.result-empty p {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.result-empty strong { color: var(--rose); font-weight: 600; }
+
+/* ── RISK HEADER ── */
+.risk-header {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 22px 26px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.risk-header.critical { background: var(--crit-bg); }
+.risk-header.high     { background: var(--high-bg); }
+.risk-header.moderate { background: var(--mod-bg); }
+.risk-header.low      { background: var(--low-bg); }
+
+.risk-level {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 6px;
+}
+
+.risk-level-text {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.risk-condition-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  margin-top: 5px;
+  letter-spacing: 0.01em;
+}
+
+.risk-patient-text {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  margin-top: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.risk-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.icd-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.risk-ts {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.03em;
+}
+
+/* ── RESULT BODY ── */
+.result-body {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.rs {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--rule-lt);
+}
+
+.rs:last-child { border-bottom: none; }
+
+/* Section label inside result — same DUAC h4 style */
+.rs-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rs-label::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rose), var(--plum-mid));
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.rs-label svg { flex-shrink: 0; color: var(--muted); }
+
+/* Explanation */
+.explanation-text {
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+/* Actions */
+.action-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+
+.action-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--body);
+}
+
+.action-num {
+  min-width: 20px;
+  height: 20px;
+  background: var(--rose);
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 1px;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+/* Referral */
+.referral-block {
+  border-left: 3px solid var(--sage);
+  padding: 10px 14px;
+  background: var(--sage-pale);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1A5C38;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.referral-block.emergency {
+  border-left-color: #DC2626;
+  background: #FEF2F2;
+  color: #991B1B;
+}
+
+/* Override notice */
+.override-notice {
+  margin: 12px 24px 0;
+  background: #FFFBEB;
+  border: 1px solid rgba(252,211,77,0.6);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #92400E;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Probability bars */
+.prob-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.prob-item { display: flex; flex-direction: column; gap: 5px; }
+
+.prob-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prob-cat {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.prob-pct {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.prob-track {
+  height: 4px;
+  background: var(--rule-lt);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.prob-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+.prob-fill.critical { background: #DC2626; }
+.prob-fill.high     { background: #EA580C; }
+.prob-fill.moderate { background: #D97706; }
+.prob-fill.low      { background: #2E9E6E; }
+
+/* ── LOADING ── */
+.loading-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(59,31,78,0.4);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.loading-overlay.active { display: flex; }
+
+.loading-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 40px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--rule);
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid var(--rule-lt);
+  border-top-color: var(--rose);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading-box p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+/* ── FADE IN ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.24s var(--ease) forwards; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--muted);
+  border-top: 1px solid var(--rule-lt);
+  background: var(--white);
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
+footer .brand-ft { color: var(--rose); font-weight: 600; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .workspace { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav-inner">
+    <a href="/" class="brand" style="text-decoration:none;">
+      <div class="brand-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"/>
+          <path d="M12 8v4l3 3"/>
+          <path d="M18 2l4 4-4 4"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Abiyamo</span>
+        <span class="brand-sub">AI Companion for Safe Pregnancy &amp; Newborns</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/app" class="active">Assessment Tool</a>
+    </nav>
+    <div class="header-right">
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        Model active
+      </span>
+      <span class="ver-chip">ANC v1.0</span>
+    </div>
+  </div>
+</header>
+
+<!-- LOADING -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <p>Running assessment…</p>
+  </div>
+</div>
+
+<!-- WORKSPACE -->
+<div class="workspace">
+
+  <!-- LEFT: FORM PANEL -->
+  <div class="panel">
+    <div class="panel-head">
+      <div class="panel-head-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+          <rect x="8" y="2" width="8" height="4" rx="1"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+          <line x1="9" y1="16" x2="13" y2="16"/>
+        </svg>
+      </div>
+      <h2>ANC Patient Assessment</h2>
+      <span class="panel-head-aside">26 variables</span>
+    </div>
+
+    <div class="panel-body">
+
+      <!-- Patient Information -->
+      <div class="fs">
+        <div class="fs-label">Patient Information</div>
+        <div class="frow">
+          <div class="fg">
+            <label>Patient ID</label>
+            <input type="text" id="patient_id" placeholder="PHC-2026-001">
+          </div>
+          <div class="fg">
+            <label>Age <span class="unit">(years)</span></label>
+            <input type="number" id="age" min="15" max="50" placeholder="27">
+          </div>
+        </div>
+        <div class="frow three">
+          <div class="fg">
+            <label>Parity</label>
+            <input type="number" id="parity" min="0" max="10" placeholder="0">
+          </div>
+          <div class="fg">
+            <label>Previous CS</label>
+            <select id="previous_cs">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Previous Loss</label>
+            <select id="previous_loss">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label>Facility Level</label>
+            <select id="facility_level">
+              <option value="PHC">PHC</option>
+              <option value="Secondary">Secondary</option>
+              <option value="Tertiary">Tertiary</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Geopolitical Zone</label>
+            <select id="geo_zone">
+              <option value="North-West">North-West</option>
+              <option value="North-East">North-East</option>
+              <option value="North-Central">North-Central</option>
+              <option value="South-West">South-West</option>
+              <option value="South-East">South-East</option>
+              <option value="South-South">South-South</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clinical Measurements -->
+      <div class="fs">
+        <div class="fs-label">Clinical Measurements</div>
+        <div class="frow three">
+          <div class="fg">
+            <label>SBP <span class="unit">(mmHg)</span></label>
+            <input type="number" id="sbp_mmhg" min="60" max="220" placeholder="120">
+          </div>
+          <div class="fg">
+            <label>DBP <span class="unit">(mmHg)</span></label>
+            <input type="number" id="dbp_mmhg" min="40" max="140" placeholder="80">
+          </div>
+          <div class="fg">
+            <label>GA <span class="unit">(wks)</span></label>
+            <input type="number" id="gestational_age_wks" min="4" max="42" placeholder="28">
+          </div>
+        </div>
+        <div class="frow three">
+          <div class="fg">
+            <label>Hb <span class="unit">(g/dL)</span></label>
+            <input type="number" id="hemoglobin_gdl" min="3" max="18" step="0.1" placeholder="10.5">
+          </div>
+          <div class="fg">
+            <label>BMI <span class="unit">(kg/m²)</span></label>
+            <input type="number" id="bmi" min="14" max="55" step="0.1" placeholder="24.0">
+          </div>
+          <div class="fg">
+            <label>Fundal Ht <span class="unit">(cm)</span></label>
+            <input type="number" id="fundal_height_cm" min="8" max="45" step="0.5" placeholder="28.0">
+          </div>
+        </div>
+        <div class="frow one">
+          <div class="fg">
+            <label>Urine Protein (Dipstick)</label>
+            <select id="urine_protein">
+              <option value="negative">Negative</option>
+              <option value="trace">Trace</option>
+              <option value="1+">1+</option>
+              <option value="2+">2+</option>
+              <option value="3+">3+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comorbidities -->
+      <div class="fs">
+        <div class="fs-label">Comorbidities</div>
+        <div class="toggle-grid">
+          <label class="tg"><input type="checkbox" id="hiv_status"> HIV Positive</label>
+          <label class="tg"><input type="checkbox" id="malaria_status"> Malaria Positive</label>
+          <label class="tg"><input type="checkbox" id="gdm_risk"> GDM Risk</label>
+        </div>
+      </div>
+
+      <!-- Presenting Symptoms -->
+      <div class="fs">
+        <div class="fs-label">Presenting Symptoms</div>
+        <div class="toggle-grid">
+          <label class="tg"><input type="checkbox" id="symptom_headache"> Headache</label>
+          <label class="tg"><input type="checkbox" id="symptom_oedema"> Oedema</label>
+          <label class="tg"><input type="checkbox" id="symptom_rfm"> Reduced FM</label>
+          <label class="tg"><input type="checkbox" id="symptom_bleeding"> Vaginal Bleeding</label>
+          <label class="tg"><input type="checkbox" id="symptom_epigastric"> Epigastric Pain</label>
+        </div>
+      </div>
+
+      <button class="btn-run" onclick="runAssessment()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        Run Assessment
+      </button>
+      <button class="btn-clear" onclick="clearForm()">Clear Form</button>
+
+    </div>
+  </div>
+
+  <!-- RIGHT: RESULT PANEL -->
+  <div id="result-panel">
+    <div class="result-empty">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+      <p>
+        Enter patient ANC data on the left<br>
+        and click <strong>Run Assessment</strong><br>
+        to generate the risk report.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="brand-ft">ABIYAMO</span> &nbsp;&mdash;&nbsp;
+  AI-powered ANC Risk Stratification &nbsp;&mdash;&nbsp;
+  AI4SID Accelerator Programme &nbsp;&mdash;&nbsp;
+  <em>Clinical decision support only. Final judgment rests with the clinician.</em>
+</footer>
+
+<script>
+function getVal(id) {
+  const el = document.getElementById(id);
+  if (!el) return null;
+  if (el.type === 'checkbox') return el.checked ? 1 : 0;
+  return el.value;
+}
+
+async function runAssessment() {
+  const required = ['age','sbp_mmhg','dbp_mmhg','gestational_age_wks','hemoglobin_gdl','bmi','fundal_height_cm'];
+  for (const id of required) {
+    if (!getVal(id)) {
+      alert('Please fill in all required clinical measurements.');
+      document.getElementById(id).focus();
+      return;
+    }
+  }
+
+  document.getElementById('loading').classList.add('active');
+
+  const payload = {
+    patient_id:           getVal('patient_id') || 'ANON',
+    age:                  getVal('age'),
+    parity:               getVal('parity') || 0,
+    previous_cs:          getVal('previous_cs'),
+    previous_loss:        getVal('previous_loss'),
+    facility_level:       getVal('facility_level'),
+    geo_zone:             getVal('geo_zone'),
+    gestational_age_wks:  getVal('gestational_age_wks'),
+    sbp_mmhg:             getVal('sbp_mmhg'),
+    dbp_mmhg:             getVal('dbp_mmhg'),
+    hemoglobin_gdl:       getVal('hemoglobin_gdl'),
+    bmi:                  getVal('bmi'),
+    fundal_height_cm:     getVal('fundal_height_cm'),
+    urine_protein:        getVal('urine_protein'),
+    hiv_status:           getVal('hiv_status'),
+    malaria_status:       getVal('malaria_status'),
+    gdm_risk:             getVal('gdm_risk'),
+    symptom_headache:     getVal('symptom_headache'),
+    symptom_oedema:       getVal('symptom_oedema'),
+    symptom_rfm:          getVal('symptom_rfm'),
+    symptom_bleeding:     getVal('symptom_bleeding'),
+    symptom_epigastric:   getVal('symptom_epigastric'),
+  };
+
+  try {
+    const res = await fetch('/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    document.getElementById('loading').classList.remove('active');
+    if (data.success) renderResult(data);
+    else alert('Error: ' + data.error);
+  } catch (e) {
+    document.getElementById('loading').classList.remove('active');
+    alert('Connection error. Is the server running?');
+  }
+}
+
+const ICON_CLIP = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><line x1="8" y1="15" x2="8" y2="18"/><circle cx="8" cy="20" r="2"/></svg>`;
+const ICON_LIST = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`;
+const ICON_MAP  = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>`;
+const ICON_BAR  = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`;
+const ICON_WARN = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
+
+function renderResult(d) {
+  const levelClass = d.risk_name.toLowerCase();
+  const isEmergency = d.risk_name === 'Critical';
+  const probs = d.probabilities;
+
+  const probHtml = ['Low','Moderate','High','Critical'].map(cat => `
+    <div class="prob-item">
+      <div class="prob-row">
+        <span class="prob-cat">${cat}</span>
+        <span class="prob-pct">${probs[cat]}%</span>
+      </div>
+      <div class="prob-track">
+        <div class="prob-fill ${cat.toLowerCase()}" style="width:${probs[cat]}%"></div>
+      </div>
+    </div>
+  `).join('');
+
+  const actionsHtml = d.actions.map((a, i) => `
+    <li>
+      <div class="action-num">${i+1}</div>
+      <span>${a}</span>
+    </li>
+  `).join('');
+
+  const overrideHtml = d.rule_override ? `
+    <div class="override-notice">
+      ${ICON_WARN}
+      Clinical rule guardrail applied — risk elevated above ML model prediction
+    </div>
+  ` : '';
+
+  const html = `
+    <div class="fade-in">
+      <div class="risk-header ${levelClass}">
+        <div class="risk-left">
+          <div class="risk-level">Risk Category</div>
+          <div class="risk-level-text">${d.risk_name}</div>
+          <div class="risk-condition-text">${d.condition}</div>
+          <div class="risk-patient-text">Patient &nbsp;${d.patient_id}</div>
+        </div>
+        <div class="risk-right">
+          <span class="icd-tag">${d.icd11_code}</span>
+          <span class="risk-ts">${d.timestamp}</span>
+        </div>
+      </div>
+
+      ${overrideHtml}
+
+      <div class="result-body">
+        <div class="rs">
+          <div class="rs-label">${ICON_CLIP} Clinical Assessment</div>
+          <p class="explanation-text">${d.explanation}</p>
+        </div>
+        <div class="rs">
+          <div class="rs-label">${ICON_LIST} Immediate Actions</div>
+          <ul class="action-list">${actionsHtml}</ul>
+        </div>
+        <div class="rs">
+          <div class="rs-label">${ICON_MAP} Referral Decision</div>
+          <div class="referral-block ${isEmergency ? 'emergency' : ''}">${d.referral}</div>
+        </div>
+        <div class="rs">
+          <div class="rs-label">${ICON_BAR} Model Confidence</div>
+          <div class="prob-grid">${probHtml}</div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('result-panel').innerHTML = html;
+  document.getElementById('result-panel').scrollIntoView({ behavior: 'smooth' });
+}
+
+function clearForm() {
+  document.querySelectorAll('input[type="number"], input[type="text"]').forEach(i => i.value = '');
+  document.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+  document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
+  document.getElementById('result-panel').innerHTML = `
+    <div class="result-empty">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      </svg>
+      <p>
+        Enter patient ANC data on the left<br>
+        and click <strong>Run Assessment</strong><br>
+        to generate the risk report.
+      </p>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>

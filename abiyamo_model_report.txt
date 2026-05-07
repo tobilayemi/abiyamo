@@ -1,0 +1,53 @@
+============================================================
+ABIYAMO - Model Evaluation Report
+Generated: 2026-03-10 07:19
+============================================================
+
+XGBoost Model Accuracy   : 99.5%
+XGBoost F1 (weighted)    : 0.9950
+5-Fold CV Accuracy       : 97.9% (+/- 0.6%)
+
+Hybrid Model Accuracy    : 97.0%
+Hybrid F1 (weighted)     : 0.9707
+
+--- FEATURES USED ---
+  age
+  parity
+  previous_cs
+  previous_loss
+  gestational_age_wks
+  sbp_mmhg
+  dbp_mmhg
+  hemoglobin_gdl
+  bmi
+  fundal_height_cm
+  urine_protein_enc
+  hiv_status
+  malaria_status
+  gdm_risk
+  symptom_headache
+  symptom_oedema
+  symptom_rfm
+  symptom_bleeding
+  symptom_epigastric
+  facility_level_enc
+  geo_zone_enc
+  pulse_pressure
+  map
+  fh_ga_diff
+  anaemia_severity
+  hypertension_flag
+  severe_htn_flag
+  symptom_burden
+  third_trimester
+  grand_multipara
+  obese
+
+--- RULE GUARDRAILS ---
+  Critical: SBP >= 160 OR DBP >= 110
+  Critical: Hemoglobin < 7.0 g/dL
+  Critical: Bleeding + Previous CS + GA > 24wks
+  High:     SBP >= 140 AND Urine Protein 2+ or 3+
+  High:     Hemoglobin < 9.0 g/dL
+
+============================================================

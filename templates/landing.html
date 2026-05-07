@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abiyamo — AI Companion for Safe Pregnancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+/* ================================================================
+   ABIYAMO — Landing Page
+   Palette: Warm Plum · Dusty Rose · Blush Ivory · Sage
+   Font: Poppins
+   ================================================================ */
+:root {
+  --plum:      #3B1F4E;
+  --plum-mid:  #4D2B63;
+  --plum-lt:   #6B4080;
+  --rose:      #C4769A;
+  --rose-dk:   #A85C80;
+  --rose-pale: #FDF0F5;
+  --sage:      #5A9E7A;
+  --sage-pale: #F0F8F4;
+  --ivory:     #FDF7F5;
+  --white:     #FFFCFE;
+  --ink:       #3B1F4E;
+  --body:      #5A3F6B;
+  --muted:     #8B6FA0;
+  --rule:      rgba(196,118,154,0.14);
+  --rule-lt:   rgba(196,118,154,0.08);
+  --shadow:    0 12px 36px rgba(59,31,78,0.10), 0 2px 8px rgba(59,31,78,0.06);
+  --shadow-sm: 0 2px 10px rgba(59,31,78,0.07);
+  --radius:    6px;
+  --radius-lg: 10px;
+  --max:       1200px;
+  --ease:      cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  background: var(--ivory);
+  color: var(--body);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── SHARED HELPERS ── */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brand-rule {
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rose), var(--plum-mid));
+  border-radius: 1px;
+  margin-bottom: 14px;
+}
+
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 10px;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--plum);
+  height: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--rose) 0%, var(--plum-mid) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-mark svg { color: #fff; }
+
+.brand-text { display: flex; flex-direction: column; gap: 1px; }
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #F8F5FC;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 9.5px;
+  font-weight: 400;
+  color: #9B7BB0;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9B7BB0;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-links a:hover { color: #E8C8D8; background: rgba(255,255,255,0.06); }
+.nav-links a.active { color: #fff; }
+
+.nav-cta {
+  background: var(--rose);
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 7px 18px !important;
+  border-radius: 20px !important;
+  letter-spacing: 0.04em;
+  transition: background 0.15s !important;
+}
+
+.nav-cta:hover { background: var(--rose-dk) !important; color: white !important; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--plum);
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 88px;
+}
+
+/* soft background glow blobs */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(196,118,154,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(90,158,122,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 24px; height: 2px;
+  background: var(--rose);
+  border-radius: 1px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  color: #F8F5FC;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--rose);
+}
+
+.hero-desc {
+  font-size: 15.5px;
+  font-weight: 400;
+  color: rgba(248,245,252,0.65);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rose);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 4px 18px rgba(196,118,154,0.4);
+}
+
+.btn-hero-primary:hover { background: var(--rose-dk); transform: translateY(-1px); }
+
+.btn-hero-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: rgba(248,245,252,0.7);
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-hero-ghost:hover {
+  border-color: rgba(255,255,255,0.3);
+  color: white;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Hero right: stat cards */
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-num span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--rose);
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.02em;
+}
+
+.stat-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ── SECTION BASE ── */
+.section {
+  padding: 80px 0;
+}
+
+.section.alt { background: var(--white); }
+.section.plum { background: var(--plum); }
+
+.section-head {
+  margin-bottom: 52px;
+}
+
+.section-head.centered {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 52px;
+}
+
+.section-head h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── PROBLEM SECTION ── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.problem-text h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.problem-text p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.problem-text p:last-of-type { margin-bottom: 0; }
+
+.problem-highlight {
+  font-weight: 600;
+  color: var(--rose-dk);
+}
+
+.problem-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pstat {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--rose);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.pstat-num {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.pstat-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── HOW IT WORKS ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* connector line between steps */
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(33.33% - 16px);
+  right: calc(33.33% - 16px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--rule), var(--rose), var(--rule));
+  pointer-events: none;
+}
+
+.step-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--rose-pale);
+  border: 2px solid var(--rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+}
+
+.step-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  background: var(--rose-pale);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  margin-bottom: 16px;
+}
+
+.step-card h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.step-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.step-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: var(--rose-pale);
+  color: var(--rose-dk);
+  border: 1px solid var(--rule);
+}
+
+/* ── RISK CATEGORIES ── */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.risk-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s var(--ease);
+}
+
+.risk-card:hover { transform: translateY(-3px); }
+
+.risk-card-top {
+  padding: 22px 20px 16px;
+}
+
+.risk-card.critical .risk-card-top { background: #7F1D1D; }
+.risk-card.high     .risk-card-top { background: #78350F; }
+.risk-card.moderate .risk-card-top { background: #713F12; }
+.risk-card.low      .risk-card-top { background: #14532D; }
+
+.risk-card-level {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+
+.risk-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.risk-card-bottom {
+  background: var(--white);
+  border: 1px solid var(--rule-lt);
+  border-top: none;
+  padding: 16px 20px;
+}
+
+.risk-card-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.risk-card-tag {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+}
+
+.risk-card.critical .risk-card-tag { background: #FEF2F2; color: #991B1B; }
+.risk-card.high     .risk-card-tag { background: #FFFBEB; color: #92400E; }
+.risk-card.moderate .risk-card-tag { background: #FEFCE8; color: #854D0E; }
+.risk-card.low      .risk-card-tag { background: #F0FBF5; color: #14532D; }
+
+/* ── WHAT IT ASSESSES ── */
+.assess-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.assess-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.assess-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius);
+  background: var(--rose-pale);
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  margin-bottom: 14px;
+}
+
+.assess-card h4 {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.var-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.var-tag {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--body);
+  background: var(--ivory);
+  border: 1px solid var(--rule-lt);
+  padding: 3px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.01em;
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--plum) 0%, var(--plum-mid) 60%, #6B4080 100%);
+  padding: 72px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: 10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(196,118,154,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-banner h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.cta-banner p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+  background: var(--rose-pale);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 16px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.disclaimer svg { color: var(--rose); flex-shrink: 0; margin-top: 1px; }
+
+.disclaimer p {
+  font-size: 12.5px;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+.disclaimer strong { color: var(--rose-dk); font-weight: 600; }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--muted);
+  border-top: 1px solid var(--rule-lt);
+  background: var(--white);
+  letter-spacing: 0.02em;
+}
+
+footer .brand-ft { color: var(--rose); font-weight: 600; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { display: none; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .steps-grid::before { display: none; }
+  .risk-grid { grid-template-columns: 1fr 1fr; }
+  .assess-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <div class="brand-mark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10"/>
+          <path d="M12 8v4l3 3"/>
+          <path d="M18 2l4 4-4 4"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Abiyamo</span>
+        <span class="brand-sub">AI Companion for Safe Pregnancy &amp; Newborns</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/app">Assessment Tool</a>
+      <a href="/app" class="nav-cta">Launch Tool &rarr;</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">AI4SID Accelerator Program Capstone Project</div>
+      <h1>Smarter ANC.<br><em>Safer Mothers.</em><br>Healthier Babies.</h1>
+      <p class="hero-desc">
+        Abiyamo is a hybrid AI clinical decision support tool that risk-stratifies pregnant women at point of care in Nigerian health facilities — giving frontline workers the right guidance, instantly.
+      </p>
+      <div class="hero-actions">
+        <a href="/app" class="btn-hero-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Launch Assessment Tool
+        </a>
+        <a href="#how-it-works" class="btn-hero-ghost">
+          How It Works &darr;
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">26<span>vars</span></div>
+        <div class="stat-label">Clinical variables assessed per patient</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-label">Obstetric conditions mapped to ICD-11</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Risk levels: Low · Moderate · High · Critical</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <div class="stat-num">97<span>%</span></div>
+        <div class="stat-label">Model accuracy on synthetic ANC data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE PROBLEM ── -->
+<section class="section">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-text">
+        <div class="section-eyebrow">The Problem</div>
+        <div class="brand-rule"></div>
+        <h2>Maternal Deaths That Are Largely Preventable</h2>
+        <p>
+          Nigeria accounts for nearly <span class="problem-highlight">12% of global maternal deaths</span>, despite comprising only 2.4% of the world's population. The majority of these deaths happen in primary and secondary health facilities where clinical tools are scarce and workload is high.
+        </p>
+        <p>
+          Frontline health workers often lack structured decision support for identifying high-risk pregnancies during routine ANC visits — leading to delayed referrals, missed danger signs, and preventable deaths.
+        </p>
+        <p>
+          Abiyamo addresses this by bringing a <span class="problem-highlight">hybrid AI risk engine</span> directly to the point of care, in the hands of any clinician with a browser.
+        </p>
+      </div>
+
+      <div class="problem-stats">
+        <div class="pstat">
+          <div class="pstat-num">512</div>
+          <div class="pstat-label">Maternal deaths per 100,000 live births in Nigeria (WHO, 2023)</div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-num">75%</div>
+          <div class="pstat-label">Of maternal deaths are preventable with timely care and skilled attendance</div>
+        </div>
+        <div class="pstat">
+          <div class="pstat-num">&lt; 3s</div>
+          <div class="pstat-label">Time for Abiyamo to return a risk-stratified clinical report</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section alt" id="how-it-works">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-eyebrow">How It Works</div>
+      <div class="brand-rule" style="margin: 0 auto 14px;"></div>
+      <h2>From Patient Data to Clinical Decision in Three Steps</h2>
+      <p>A structured, transparent workflow built for health facilities at all levels &mdash; from PHC to tertiary.</p>
+    </div>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1"/>
+            <line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/>
+          </svg>
+        </div>
+        <h3>Enter Patient Data</h3>
+        <p>Complete the structured ANC form with 26 clinical variables for the patient — demographics, vitals, lab values, comorbidities, and current symptoms.</p>
+        <div class="step-tags">
+          <span class="step-tag">Demographics</span>
+          <span class="step-tag">Vitals</span>
+          <span class="step-tag">Lab Values</span>
+          <span class="step-tag">Symptoms</span>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Hybrid AI Analysis</h3>
+        <p>The XGBoost model predicts risk across four categories. Clinical rule guardrails override the model for life-threatening thresholds — ML and medicine, together.</p>
+        <div class="step-tags">
+          <span class="step-tag">XGBoost ML</span>
+          <span class="step-tag">Rule Guardrails</span>
+          <span class="step-tag">ICD-11 Mapping</span>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/>
+          </svg>
+        </div>
+        <h3>Receive Risk Report</h3>
+        <p>Instantly get the risk category, primary condition, ICD-11 code, clinical explanation, step-by-step actions, and a referral decision.</p>
+        <div class="step-tags">
+          <span class="step-tag">Risk Level</span>
+          <span class="step-tag">Actions</span>
+          <span class="step-tag">Referral</span>
+          <span class="step-tag">Confidence</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── RISK CATEGORIES ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-eyebrow">Risk Categories</div>
+      <div class="brand-rule" style="margin: 0 auto 14px;"></div>
+      <h2>Four Levels, Clear Clinical Meaning</h2>
+      <p>Every assessment resolves to one of four risk categories, each mapped to a set of immediate actions and a referral decision.</p>
+    </div>
+
+    <div class="risk-grid">
+
+      <div class="risk-card critical">
+        <div class="risk-card-top">
+          <div class="risk-card-level">Level 4</div>
+          <div class="risk-card-name">Critical</div>
+        </div>
+        <div class="risk-card-bottom">
+          <p class="risk-card-desc">Life-threatening condition requiring emergency intervention. Examples: severe pre-eclampsia, severe anaemia (Hb &lt; 7), antepartum haemorrhage.</p>
+          <span class="risk-card-tag">Emergency Referral</span>
+        </div>
+      </div>
+
+      <div class="risk-card high">
+        <div class="risk-card-top">
+          <div class="risk-card-level">Level 3</div>
+          <div class="risk-card-name">High</div>
+        </div>
+        <div class="risk-card-bottom">
+          <p class="risk-card-desc">Significant risk needing urgent clinical action within 24 hours. Examples: pre-eclampsia, moderate-severe anaemia, malaria in pregnancy, HIV-PMTCT.</p>
+          <span class="risk-card-tag">Urgent Action</span>
+        </div>
+      </div>
+
+      <div class="risk-card moderate">
+        <div class="risk-card-top">
+          <div class="risk-card-level">Level 2</div>
+          <div class="risk-card-name">Moderate</div>
+        </div>
+        <div class="risk-card-bottom">
+          <p class="risk-card-desc">Elevated risk requiring enhanced monitoring and management. Examples: gestational hypertension, mild anaemia, obesity, previous caesarean section.</p>
+          <span class="risk-card-tag">Enhanced Monitoring</span>
+        </div>
+      </div>
+
+      <div class="risk-card low">
+        <div class="risk-card-top">
+          <div class="risk-card-level">Level 1</div>
+          <div class="risk-card-name">Low</div>
+        </div>
+        <div class="risk-card-bottom">
+          <p class="risk-card-desc">No significant risk factors identified. Routine ANC care recommended with standard supplementation, immunisation, and birth preparedness counselling.</p>
+          <span class="risk-card-tag">Routine ANC</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT IT ASSESSES ── -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head centered">
+      <div class="section-eyebrow">Clinical Coverage</div>
+      <div class="brand-rule" style="margin: 0 auto 14px;"></div>
+      <h2>26 Variables Across Four Clinical Domains</h2>
+      <p>Every variable was selected for its clinical relevance to maternal risk in the Nigerian context.</p>
+    </div>
+
+    <div class="assess-grid">
+
+      <div class="assess-card">
+        <div class="assess-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <h4>Patient Profile</h4>
+        <div class="var-tags">
+          <span class="var-tag">Age</span>
+          <span class="var-tag">Parity</span>
+          <span class="var-tag">Previous CS</span>
+          <span class="var-tag">Previous Loss</span>
+          <span class="var-tag">Facility Level</span>
+          <span class="var-tag">Geo Zone</span>
+        </div>
+      </div>
+
+      <div class="assess-card">
+        <div class="assess-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h4>Clinical Measurements</h4>
+        <div class="var-tags">
+          <span class="var-tag">SBP</span>
+          <span class="var-tag">DBP</span>
+          <span class="var-tag">Gestational Age</span>
+          <span class="var-tag">Haemoglobin</span>
+          <span class="var-tag">BMI</span>
+          <span class="var-tag">Fundal Height</span>
+          <span class="var-tag">Urine Protein</span>
+        </div>
+      </div>
+
+      <div class="assess-card">
+        <div class="assess-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h4>Comorbidities</h4>
+        <div class="var-tags">
+          <span class="var-tag">HIV Status</span>
+          <span class="var-tag">Malaria Status</span>
+          <span class="var-tag">GDM Risk</span>
+        </div>
+      </div>
+
+      <div class="assess-card">
+        <div class="assess-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h4>Presenting Symptoms</h4>
+        <div class="var-tags">
+          <span class="var-tag">Headache</span>
+          <span class="var-tag">Oedema</span>
+          <span class="var-tag">Reduced Fetal Movement</span>
+          <span class="var-tag">Vaginal Bleeding</span>
+          <span class="var-tag">Epigastric Pain</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="section-eyebrow" style="color: var(--rose);">Ready to Use</div>
+    <h2>Start an ANC Risk Assessment Now</h2>
+    <p>No login required. Enter patient data and receive a full risk report with clinical actions in under three seconds.</p>
+    <a href="/app" class="btn-hero-primary" style="display:inline-flex; margin-bottom: 36px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Launch Assessment Tool
+    </a>
+
+    <div class="disclaimer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      <p>
+        <strong>Clinical Decision Support Only.</strong> Abiyamo is a decision support tool, not a diagnostic system. All outputs must be reviewed and validated by a qualified clinician. Final clinical judgment rests with the attending health professional.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="brand-ft">ABIYAMO</span> &nbsp;&mdash;&nbsp;
+  AI-powered ANC Risk Stratification &nbsp;&mdash;&nbsp;
+  AI4SID Accelerator Programme &nbsp;&mdash;&nbsp;
+  Built with XGBoost · Flask · ICD-11
+</footer>
+
+</body>
+</html>
