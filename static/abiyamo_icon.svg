@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="brand-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C4769A"/>
+      <stop offset="100%" stop-color="#4D2B63"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background in brand gradient -->
+  <rect width="64" height="64" rx="14" fill="url(#brand-bg)"/>
+  <!-- Head (side profile, facing left) -->
+  <circle cx="26" cy="14" r="8" fill="white"/>
+  <!-- Body: back is straight-right, belly protrudes left -->
+  <path d="M31 22
+    C37 23 39 29 39 36
+    C39 43 38 51 37 57
+    L22 57
+    L22 53
+    C22 49 16 46 13 41
+    C11 36 13 30 18 27
+    C22 24 28 22 31 22 Z"
+    fill="white"/>
+</svg>

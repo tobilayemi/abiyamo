@@ -8,3 +8,5 @@ mlruns/
 *.log
 flask_output.txt
 flask_error.txt
+.gitignore
+.claude
