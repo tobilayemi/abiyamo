@@ -1,0 +1,3 @@
+# Python bytecode, regenerated automatically every time the app runs
+__pycache__/
+*.pyc
