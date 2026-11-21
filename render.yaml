@@ -1,0 +1,10 @@
+# Render blueprint: Dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: abiyamo
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # The ML libraries take ~20 s to import on a cold start, so allow the worker longer than the default 30 s.
+    startCommand: gunicorn app:app --timeout 120
+    healthCheckPath: /

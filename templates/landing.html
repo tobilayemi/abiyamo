@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abiyamo — AI Companion for Safe Pregnancy</title>
+<link rel="icon" href="/static/abiyamo_icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
@@ -737,6 +738,14 @@ footer .brand-ft { color: var(--rose); font-weight: 600; }
   .risk-grid { grid-template-columns: 1fr 1fr; }
   .assess-grid { grid-template-columns: 1fr 1fr; }
 }
+
+@media (max-width: 640px) {
+  .container, .nav-inner { padding: 0 16px; }
+  .section { padding: 56px 0; }
+  .nav-links a.nav-secondary { display: none; }
+  .brand-sub { display: none; }
+  .risk-grid, .assess-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -757,8 +766,9 @@ footer .brand-ft { color: var(--rose); font-weight: 600; }
       </div>
     </a>
     <nav class="nav-links">
-      <a href="/" class="active">Home</a>
-            <a href="/app" class="nav-cta"> Click Here to Launch Tool</a>
+      <a href="/" class="active nav-secondary">Home</a>
+      <a href="/early-warning" class="nav-secondary">How Alerts Work</a>
+      <a href="/app" class="nav-cta">Launch Tool</a>
     </nav>
   </div>
 </header>
@@ -785,8 +795,8 @@ footer .brand-ft { color: var(--rose); font-weight: 600; }
 
     <div class="hero-stats">
       <div class="stat-card">
-        <div class="stat-num">26<span>vars</span></div>
-        <div class="stat-label">Clinical variables assessed per patient</div>
+        <div class="stat-num">21<span>entries</span></div>
+        <div class="stat-label">Routine ANC entries assessed per visit</div>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-card">
@@ -866,12 +876,13 @@ footer .brand-ft { color: var(--rose); font-weight: 600; }
           </svg>
         </div>
         <h3>Enter Patient Data</h3>
-        <p>Complete the structured ANC form with 26 clinical variables for the patient — demographics, vitals, lab values, comorbidities, and current symptoms.</p>
+        <p>Fill the ANC form one section per screen, with values checked as you type. A review page shows everything before you submit, and entries are saved on the phone if the network drops.</p>
         <div class="step-tags">
-          <span class="step-tag">Demographics</span>
+          <span class="step-tag">Mother</span>
+          <span class="step-tag">History</span>
           <span class="step-tag">Vitals</span>
-          <span class="step-tag">Lab Values</span>
-          <span class="step-tag">Symptoms</span>
+          <span class="step-tag">Tests</span>
+          <span class="step-tag">Danger Signs</span>
         </div>
       </div>
 
@@ -980,8 +991,8 @@ footer .brand-ft { color: var(--rose); font-weight: 600; }
     <div class="section-head centered">
       <div class="section-eyebrow">Clinical Coverage</div>
       <div class="brand-rule" style="margin: 0 auto 14px;"></div>
-      <h2>26 Variables Across Four Clinical Domains</h2>
-      <p>Every variable was selected for its clinical relevance to maternal risk in the Nigerian context.</p>
+      <h2>21 Routine ANC Entries Across Four Clinical Domains</h2>
+      <p>Every entry was selected for its clinical relevance to maternal risk in the Nigerian context. <a href="/early-warning" style="color: var(--rose-dk); font-weight: 600;">See which entries trigger which alerts &rarr;</a></p>
     </div>
 
     <div class="assess-grid">

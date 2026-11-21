@@ -26,6 +26,24 @@ A hybrid model pairs rule based clinical guardrails with a gradient boosted clas
 - **Database:** PostgreSQL with anonymised records
 - **Integration:** DHIS2 REST API, FHIR compatible endpoints
 
+## Who it's for
+
+- **Users:** midwives, nurses and CHEWs at primary health centres (the web app), and pregnant women and new mothers (WhatsApp, in development).
+- **Customers:** state primary health care boards and ministries of health, with pilots funded by donor maternal health programmes.
+- **First pilot:** a small number of PHCs; site and partner still being confirmed.
+
+Full personas: [docs/stakeholders.md](docs/stakeholders.md).
+
+## The ANC form
+
+The web app (`/app`) takes the ANC form one section per screen: mother and visit, pregnancy and history, vital signs, test results, danger signs, then a review page before submission. It is built for phones. Values are checked as they are typed, entries are saved on the device after every change, and the form keeps working when the connection drops.
+
+Each page lists what its entries are checked for, entries that can raise an alert carry an "Early warning" tag, and the risk report lists which entries raised each alert. `/early-warning` maps every form section to the alerts it can raise. The form, validation, alert rules and that page all come from one table in `anc_form.py`, which is also what the server uses to apply its clinical guardrails.
+
+## EMR integration (FHIR R4)
+
+Each assessment can be downloaded from the risk report as a FHIR R4 record, and EMRs can call `POST /fhir/$assess` with a Bundle of ANC Observations to get a RiskAssessment back. Entries use LOINC and SNOMED CT codes and conditions use ICD-11. Mapping, endpoints and limitations: [docs/fhir.md](docs/fhir.md).
+
 ## Status
 
 Prototype phase. Building the rule based scoring layer, the manual entry interface, and an English WhatsApp bot, tested on synthetic and de-identified ANC data.
