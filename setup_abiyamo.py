@@ -70,7 +70,7 @@ if not readme_path.exists():
 # ABIYAMO
 **AI Companion for Safe Pregnancy and Healthy Newborns**
 
-AI4SID Accelerator Programme — Capstone Project
+AI4SID Accelerator Programme, Capstone Project
 
 ## Project Structure
 ```

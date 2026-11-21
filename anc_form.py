@@ -124,12 +124,12 @@ FIELDS = {
     "sbp_mmhg": {
         "label": "Systolic BP", "noun": "systolic BP", "unit": "mmHg", "type": "int",
         "required": True, "min": 50, "max": 260, "check_min": 80, "check_max": 200,
-        "placeholder": "120", "help": "The top number.",
+        "placeholder": "120", "help": "The top number. Usual range in pregnancy: 90 to 139 mmHg.",
     },
     "dbp_mmhg": {
         "label": "Diastolic BP", "noun": "diastolic BP", "unit": "mmHg", "type": "int",
         "required": True, "min": 30, "max": 160, "check_min": 50, "check_max": 130,
-        "placeholder": "80", "help": "The bottom number.",
+        "placeholder": "80", "help": "The bottom number. Usual range in pregnancy: 60 to 89 mmHg.",
     },
     "bmi": {
         "label": "BMI", "noun": "BMI", "unit": "kg/m²", "type": "decimal",
@@ -139,7 +139,7 @@ FIELDS = {
     "fundal_height_cm": {
         "label": "Fundal height", "noun": "fundal height", "unit": "cm", "type": "decimal",
         "required": True, "min": 5, "max": 50, "placeholder": "28",
-        "help": "Symphysis–fundal height in centimetres.",
+        "help": "Symphysis-fundal height in centimetres. Leave blank before 20 weeks.",
     },
     "hemoglobin_gdl": {
         "label": "Haemoglobin (Hb)", "noun": "haemoglobin", "unit": "g/dL", "type": "decimal",
@@ -188,6 +188,32 @@ FIELDS = {
 # Fields that only feed the risk model as context, or are not scored at all.
 RECORD_ONLY = {"patient_id"}
 
+# ── Checks across entries (mirrored in templates/index.html via client_schema) ──
+LOGIC = {
+    # Fundal height is usually not measurable before this; blank is allowed and the
+    # model is given the gestational age instead (i.e. growth assumed on track).
+    "fh_required_from_weeks": 20,
+    # Mothers cannot feel fetal movements before this.
+    "movement_from_weeks": 16,
+    # Youngest plausible age at first birth: parity above age minus this is impossible.
+    "min_age_at_first_birth": 11,
+    "messages": {
+        "cs_needs_birth": "Parity is 0, but a previous caesarean section means at least one previous birth. "
+                          "Correct the parity or this answer.",
+        "parity_impossible": "A parity of {parity} isn't possible for a mother aged {age}. Check the age and parity.",
+        "movement_too_early": "Fetal movements can't be felt before {weeks} weeks, and this pregnancy is "
+                              "{ga} weeks. Check the gestational age, or answer No.",
+        "fh_required": "Fundal height is required from {weeks} weeks.",
+    },
+}
+
+
+def _msg(key, **kw):
+    text = LOGIC["messages"][key]
+    for k, v in kw.items():
+        text = text.replace("{" + k + "}", str(v))
+    return text
+
 # ── Early-warning rules ──────────────────────────────────────────────────────
 # kind:
 #   guardrail  fixed clinical threshold. Raises the risk level to at least `floor`
@@ -221,7 +247,7 @@ RULES = [
      "threshold": "Systolic ≥ 140 mmHg with urine protein 2+ or 3+",
      "when": {"all": [["sbp_mmhg", ">=", 140], ["protein_level", ">=", 3]]}},
     {"id": "mod_anaemia", "kind": "guardrail", "floor": 2, "group": "anaemia",
-     "title": "Moderate–severe anaemia", "detects": "Moderate–severe anaemia", "icd11": "JB64.0",
+     "title": "Moderate to severe anaemia", "detects": "Moderate to severe anaemia", "icd11": "JB64.0",
      "threshold": "Hb below 9 g/dL",
      "when": {"all": [["hemoglobin_gdl", "<", 9]]}},
     # Warning signs (flags)
@@ -246,6 +272,10 @@ RULES = [
      "title": "Raised blood pressure", "detects": "Gestational hypertension", "icd11": "JA23",
      "threshold": "Systolic ≥ 140 or diastolic ≥ 90 mmHg",
      "when": {"any": [["sbp_mmhg", ">=", 140], ["dbp_mmhg", ">=", 90]]}},
+    {"id": "low_bp", "kind": "flag", "group": "bp_low",
+     "title": "Low blood pressure", "detects": "Hypotension (possible bleeding, sepsis or dehydration)",
+     "threshold": "Systolic below 90 or diastolic below 60 mmHg",
+     "when": {"any": [["sbp_mmhg", "<", 90], ["dbp_mmhg", "<", 60]]}},
     {"id": "mild_anaemia", "kind": "flag", "group": "anaemia",
      "title": "Anaemia", "detects": "Mild anaemia in pregnancy", "icd11": "JB64.0",
      "threshold": "Hb below 11 g/dL",
@@ -412,6 +442,14 @@ def validate(payload):
     for fid, f in FIELDS.items():
         raw = payload.get(fid)
         raw = "" if raw is None else str(raw).strip()
+        if raw == "" and fid == "fundal_height_cm":
+            ga = values.get("gestational_age_wks")
+            if ga is not None and ga < LOGIC["fh_required_from_weeks"]:
+                values[fid] = float(ga)        # not measurable yet: assume growth on track
+                continue
+            if ga is not None:
+                errors[fid] = _msg("fh_required", weeks=LOGIC["fh_required_from_weeks"])
+                continue
         if raw == "":
             if f.get("required"):
                 errors[fid] = f"{f.get('short_label', f['label']).rstrip('?')} is required."
@@ -460,12 +498,25 @@ def validate(payload):
             else:
                 errors[fid] = "Choose one of the options."
 
-    # Cross-field checks
+    # Checks across entries: answers that contradict each other
     sbp, dbp = values.get("sbp_mmhg"), values.get("dbp_mmhg")
     if sbp is not None and dbp is not None and dbp >= sbp:
         errors["dbp_mmhg"] = (f"Diastolic must be lower than systolic ({sbp} mmHg). "
                               "Check the reading.")
         values.pop("dbp_mmhg", None)
+
+    age, parity = values.get("age"), values.get("parity")
+    if age is not None and parity is not None and parity > age - LOGIC["min_age_at_first_birth"]:
+        errors["parity"] = _msg("parity_impossible", parity=parity, age=age)
+        values.pop("parity", None)
+    elif values.get("previous_cs") == 1 and parity == 0:
+        errors["previous_cs"] = _msg("cs_needs_birth")
+        values.pop("previous_cs", None)
+
+    ga = values.get("gestational_age_wks")
+    if values.get("symptom_rfm") == 1 and ga is not None and ga < LOGIC["movement_from_weeks"]:
+        errors["symptom_rfm"] = _msg("movement_too_early", weeks=LOGIC["movement_from_weeks"], ga=ga)
+        values.pop("symptom_rfm", None)
 
     return values, errors
 
@@ -555,6 +606,7 @@ def client_schema():
                                      "sections", "rank") if k in r}
                   for r in RULES],
         "derived_from": DERIVED_FROM,
+        "logic": LOGIC,
         "protein_levels": PROTEIN_LEVELS,
         "risk_names": RISK_NAMES,
     }

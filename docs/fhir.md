@@ -39,7 +39,7 @@ Responses:
 | Previous pregnancy loss | Observation, valueBoolean | Local `previous-pregnancy-loss` |
 | Diabetes risk factors | Observation, valueBoolean | Local `gdm-risk-factors` |
 | Facility level, geopolitical zone | Organization.type | Local code systems |
-| Patient ID / ANC number | Patient.identifier | — |
+| Patient ID / ANC number | Patient.identifier | Not coded |
 
 ## Risk result → RiskAssessment
 

@@ -170,6 +170,11 @@ def to_bundle(values, result, raw=None):
     observations = []
     for fid, (sys_, code, display, cat, unit, label, vtype) in QUANTITIES.items():
         v = values[fid]
+        if fid == "fundal_height_cm" and str(raw.get(fid, "")).strip() == "":
+            # Not measurable before 20 weeks: record that it wasn't done, not the assumed value
+            observations.append(obs((sys_, code, display), cat, dataAbsentReason={
+                "coding": [{"system": DATA_ABSENT, "code": "not-performed", "display": "Not Performed"}]}))
+            continue
         if unit is None:
             observations.append(obs((sys_, code, display), cat, valueInteger=int(v)))
         else:

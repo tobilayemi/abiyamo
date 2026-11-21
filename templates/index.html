@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#3B1F4E">
-<title>Abiyamo — ANC Assessment</title>
+<title>Abiyamo | ANC Assessment</title>
 <link rel="icon" href="/static/abiyamo_icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -202,7 +202,11 @@
   var REVIEW = SECTIONS.length, RESULT = SECTIONS.length + 1, TOTAL = SECTIONS.length + 1;
   var SLUGS = SECTIONS.map(function (s) { return s.id; }).concat(['review', 'result']);
   var TITLES = SECTIONS.map(function (s) { return s.title; }).concat(['Review & submit', 'Risk report']);
-  var DEPENDENTS = { sbp_mmhg: ['dbp_mmhg'], age: ['parity'], gestational_age_wks: ['fundal_height_cm'] };
+  // When one entry changes, re-check the entries whose rules depend on it
+  var DEPENDENTS = {
+    sbp_mmhg: ['dbp_mmhg'], age: ['parity'], parity: ['previous_cs'],
+    gestational_age_wks: ['fundal_height_cm', 'symptom_rfm']
+  };
   var KEY = 'abiyamo.ancDraft.v1', PREFS_KEY = 'abiyamo.prefs.v1';
 
   var form = document.getElementById('anc-form');
@@ -296,22 +300,55 @@
     return v;
   }
 
+  // Checks across entries (same rules as anc_form.validate / anc_form.LOGIC on the server)
+  var LOGIC = SCHEMA.logic;
+  function logicMsg(key, vars) {
+    var t = LOGIC.messages[key];
+    Object.keys(vars || {}).forEach(function (k) { t = t.split('{' + k + '}').join(String(vars[k])); });
+    return t;
+  }
+  function fhOptional(all) {
+    return all.gestational_age_wks != null && all.gestational_age_wks < LOGIC.fh_required_from_weeks;
+  }
+
   function check(fid, all) {
-    var p = parse(fid, readRaw(fid));
+    var raw = readRaw(fid);
+    if (fid === 'fundal_height_cm' && raw === '' && all.gestational_age_wks != null) {
+      return fhOptional(all) ? { empty: true }
+        : { error: logicMsg('fh_required', { weeks: LOGIC.fh_required_from_weeks }) };
+    }
+    var p = parse(fid, raw);
     if (p.error || p.value === undefined) return p;
-    var f = F[fid], v = p.value, note = '';
+    var f = F[fid], v = p.value, note = '', ga = all.gestational_age_wks;
+
+    // Contradictions: block until corrected
     if (fid === 'dbp_mmhg' && all.sbp_mmhg != null && v >= all.sbp_mmhg) {
       return { error: 'Diastolic must be lower than systolic (' + all.sbp_mmhg + ' mmHg). Check the reading.' };
     }
+    if (fid === 'parity' && all.age != null && v > all.age - LOGIC.min_age_at_first_birth) {
+      return { error: logicMsg('parity_impossible', { parity: v, age: all.age }) };
+    }
+    if (fid === 'previous_cs' && v === 1 && all.parity === 0) {
+      return { error: logicMsg('cs_needs_birth') };
+    }
+    if (fid === 'symptom_rfm' && v === 1 && ga != null && ga < LOGIC.movement_from_weeks) {
+      return { error: logicMsg('movement_too_early', { weeks: LOGIC.movement_from_weeks, ga: ga }) };
+    }
+
+    // Unusual but possible: ask to double-check, don't block
     if ((f.check_min != null && v < f.check_min) || (f.check_max != null && v > f.check_max)) {
       note = fmtNum(v) + unitOf(f) + ' is unusual for ' + f.noun + '. Please double-check before continuing.';
     }
     if (fid === 'parity' && all.age != null && v > Math.max(0, all.age - 14)) {
       note = 'Parity of ' + v + ' is high for a mother aged ' + all.age + '. Please double-check.';
     }
-    if (fid === 'fundal_height_cm' && all.gestational_age_wks >= 20 && Math.abs(v - all.gestational_age_wks) > 10) {
-      note = 'This is ' + fmtNum(Math.abs(v - all.gestational_age_wks)) + ' cm away from the gestational age (' +
-             all.gestational_age_wks + ' weeks). Please re-measure and check the dates.';
+    if (fid === 'dbp_mmhg' && all.sbp_mmhg != null && all.sbp_mmhg - v < 15) {
+      note = 'Systolic and diastolic are only ' + (all.sbp_mmhg - v) + ' mmHg apart. Please re-check the reading.';
+    }
+    if (fid === 'fundal_height_cm' && ga != null &&
+        ((ga >= LOGIC.fh_required_from_weeks && Math.abs(v - ga) > 10) || v > ga + 10)) {
+      note = 'This is ' + fmtNum(Math.abs(v - ga)) + ' cm away from the gestational age (' + ga +
+             ' weeks). Please re-measure and check the dates.';
     }
     return { value: v, note: note };
   }
@@ -575,7 +612,7 @@
     if (kind === 'bmi') {
       var w = num('h-weight'), h = num('h-height');
       if (w && h) {
-        if (w < 25 || w > 250 || h < 100 || h > 220) msg = 'Check the weight (25–250 kg) and height (100–220 cm).';
+        if (w < 25 || w > 250 || h < 100 || h > 220) msg = 'Check the weight (25 to 250 kg) and height (100 to 220 cm).';
         else { val = Math.round(w / Math.pow(h / 100, 2) * 10) / 10; msg = 'BMI = ' + val + ' kg/m²'; }
       }
     } else {
@@ -608,6 +645,9 @@
   // ── Review page ──
   function displayValue(fid) {
     var f = F[fid], raw = readRaw(fid);
+    if (raw === '' && fid === 'fundal_height_cm' && fhOptional(parsedAll())) {
+      return { text: 'Not measured (before ' + LOGIC.fh_required_from_weeks + ' weeks)', faint: true };
+    }
     if (raw === '') return f.required ? { text: 'Missing', missing: true } : { text: 'Not recorded', faint: true };
     var p = parse(fid, raw);
     if (p.error) return { text: raw + ' (needs fixing)', missing: true };

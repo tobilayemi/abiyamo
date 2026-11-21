@@ -43,7 +43,7 @@ st.subheader("Newborn Assessment")
 nb_col1, nb_col2 = st.columns(2)
 with nb_col1:
     birth_weight = st.number_input("Birth Weight (kg)", 0.5, 5.0, 3.0)
-    apgar_score = st.number_input("APGAR Score (1–10)", 0, 10, 8)
+    apgar_score = st.number_input("APGAR Score (1 to 10)", 0, 10, 8)
     nb_gestational_age = st.number_input("Gestational Age at Birth (weeks)", 24, 42, 38)
 with nb_col2:
     temperature = st.number_input("Temperature (°C)", 34.0, 40.0, 37.0)
